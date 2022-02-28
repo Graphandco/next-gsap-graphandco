@@ -1,0 +1,65 @@
+.realisations__grid {
+    --color1: hsl(215deg 60% 27%);
+    --color2: hsl(215deg 50% 27%);
+    --color3: hsl(215deg 50% 45%);
+    --color4: hsl(215deg 80% 25%);
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+    color: white;
+    width: 100%;
+    @media screen and (max-width: 1650px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include mq(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    // @include mq(mobile) {
+    //     grid-template-columns: repeat(1, 1fr);
+    // }
+    @media screen and (max-width: 600px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .op5 {
+        opacity: 0.5;
+    }
+
+    &__content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px 1vw;
+        color: var(--text-color);
+        color: white;
+
+        &__title {
+            color: white;
+            text-transform: uppercase;
+            font-family: var(--title-font);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        &__description {
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        &__link {
+            text-align: right;
+            a {
+                color: whte;
+                font-size: 16px;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                transition: 0.3s;
+            }
+        }
+    }
+}

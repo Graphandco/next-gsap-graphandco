@@ -1,0 +1,125 @@
+.prestations {
+    &__lead {
+        margin-bottom: 50px;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 50px;
+        align-items: center;
+        @include mq(tablet) {
+            gap: 20px;
+        }
+        @include mq(mobile) {
+            grid-template-columns: 1fr;
+            place-items: center;
+            &__image {
+                display: none;
+            }
+        }
+    }
+    &__hero {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        svg {
+            font-size: 50px;
+            color: white;
+        }
+
+        &__row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            & > * {
+                display: flex;
+            }
+        }
+        @include mq(mobile) {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin: 50px 0;
+        padding-inline: 2vw;
+        @include mq(tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include mq(mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+    &__pack {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        transform: translateY(100px);
+        border: 1px solid rgb(74 104 127 / 12%);
+        background-color: rgba(white, 0.02);
+        opacity: 0;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: rgba(white, 0.05);
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 10px;
+            right: 0;
+            width: 2px;
+            height: 50px;
+            background-color: var(--primary);
+        }
+
+        h2 {
+            color: var(--primary);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-family: var(--title-font);
+            padding-inline: 15px;
+        }
+        &__details,
+        &__include {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 15px;
+            li {
+                display: grid;
+                grid-template-columns: 1em 1fr;
+                gap: 10px;
+                svg {
+                    color: white;
+                    font-size: 12px;
+                    transform: translateY(4px);
+                }
+                span {
+                    line-height: 1;
+                    font-size: 17px;
+                }
+            }
+        }
+
+        &__details {
+            flex-grow: 1;
+        }
+
+        &__include {
+            background-color: rgba(white, 0.03);
+            border-radius: 0 0 9px 9px;
+            margin-bottom: 0;
+            li {
+                svg {
+                    color: var(--primary);
+                }
+            }
+        }
+    }
+}

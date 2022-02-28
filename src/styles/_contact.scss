@@ -1,0 +1,51 @@
+.contact-form__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 20px 0 100px 0;
+    @include mq(mobile) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .contact-form__image {
+        display: flex;
+        margin: auto;
+        max-width: 400px;
+        justify-self: center;
+    }
+
+    form {
+        display: grid;
+        gap: 30px;
+        .form-group {
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: top;
+        }
+        input,
+        textarea {
+            outline: none;
+            background: transparent;
+            color: white;
+            font-size: 20px;
+            padding: 5px;
+            &:focus {
+                background-color: rgba(242, 173, 13, 0.1);
+            }
+        }
+        input {
+            border: none;
+            border-bottom: 1px solid var(--primary);
+        }
+        textarea {
+            margin-top: 30px;
+            padding: 10px;
+            border: 1px solid var(--primary) !important;
+            border-radius: 5px;
+        }
+        button {
+            margin-left: auto;
+        }
+    }
+}

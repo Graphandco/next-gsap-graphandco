@@ -1,0 +1,111 @@
+@use "sass:map";
+@font-face {
+    font-family: "MostraNuova";
+    src: url("./fonts/mostranuova5.woff2") format("woff2"),
+        url("./fonts/mostranuova5.woff") format("woff");
+}
+@font-face {
+    font-family: "MostraNuova2";
+    src: url("./fonts/mostranuova2.woff2") format("woff2"),
+        url("./fonts/mostranuova2.woff") format("woff");
+}
+
+$breakpoints: (
+    xs: 400px,
+    mobile: 767px,
+    tablet: 1024px,
+);
+
+@mixin mq($key) {
+    $size: map.get($breakpoints, $key);
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+body {
+    --primary: hsl(42, 90%, 50%);
+    --secondary: hsl(206, 44%, 21%, 1);
+    --main-font: "MostraNuova", sans-serif;
+    --title-font: "MostraNuova2", sans-serif;
+    --text-color: hsl(205deg 15% 70%);
+
+    font-family: var(--main-font);
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    //background-image: url(/img/bg-pattern.svg);
+}
+
+main {
+    flex-grow: 1;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 100%;
+    padding: 0 2.5vw;
+}
+.header-section {
+    padding: 50px 2vw;
+    h1 {
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            width: calc(300px + 5vw);
+            height: 2px;
+            background: linear-gradient(
+                90deg,
+                var(--primary) 0,
+                hsla(0, 0%, 100%, 0)
+            );
+            border-radius: 50px;
+        }
+    }
+}
+h1 {
+    font-size: clamp(25px, 10px + 3vw, 50px);
+    color: white;
+    font-family: var(--title-font);
+    line-height: 1;
+}
+h2 {
+    margin: 0 0 20px 0;
+    font-size: clamp(30px, 15px + 2vw, 40px);
+    color: white;
+    font-family: var(--title-font);
+    line-height: 1;
+}
+
+a,
+a:focus,
+a:active {
+    color: white;
+    text-decoration: none;
+    &:hover {
+        color: var(--primary);
+    }
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    padding: 0;
+}
+img,
+svg {
+    max-width: 100%;
+}

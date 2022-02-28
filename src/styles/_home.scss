@@ -1,0 +1,199 @@
+.hero {
+    min-height: calc(100vh - 85px);
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 50px;
+
+    @include mq(mobile) {
+        min-height: calc(100vh - 135px);
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    &-subtitle {
+        margin-bottom: 10px;
+        font-family: var(--title-font);
+        text-transform: uppercase;
+        color: var(--primary);
+        font-size: clamp(18px, 7px + 2vw, 22px);
+    }
+    &-title {
+        font-family: var(--title-font);
+        color: white;
+        font-size: clamp(50px, 20px + 5vw, 80px);
+        line-height: 0.8;
+    }
+    &-description {
+        margin-top: 30px;
+        font-size: clamp(19px, 7px + 1.3vw, 22px);
+        line-height: 1.2;
+    }
+    &-cta {
+        margin-top: 50px;
+        // text-align: right;
+    }
+    &-lottie {
+        max-width: 350px;
+    }
+}
+
+.competences {
+    background-color: rgba(white, 0.05);
+    padding: 75px 0;
+
+    &-inner {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+        gap: 50px;
+
+        @include mq(mobile) {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 20px;
+            padding-top: 30px;
+        }
+    }
+
+    &-cta {
+        margin-top: 60px;
+    }
+
+    &-image {
+        @include mq(mobile) {
+            max-width: 250px;
+        }
+    }
+}
+
+/*--------------------
+  ATOUTS
+----------------------*/
+.atouts {
+    &-wrapper {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+            "item1 item1 item2 item2 hero hero hero"
+            "item1 item1 item2 item2 hero hero hero"
+            "item3 item3 item4 item4 hero hero hero"
+            "item3 item3 item4 item4 hero hero hero";
+        @include mq(tablet) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas:
+                "item1 hero"
+                "item2 hero"
+                "item3 item4";
+        }
+        @include mq(xs) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &-item {
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        // justify-content: center;
+        padding: 2rem 1rem;
+        text-align: center;
+        aspect-ratio: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &-1 {
+            grid-area: item1;
+            order: 2;
+        }
+        &-2 {
+            grid-area: item2;
+            order: 3;
+        }
+        &-3 {
+            grid-area: item3;
+            order: 4;
+        }
+        &-4 {
+            grid-area: item4;
+            order: 5;
+        }
+        @include mq(tablet) {
+            aspect-ratio: auto;
+        }
+        @include mq(mobile) {
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+                0 10px 10px rgba(0, 0, 0, 0.22);
+        }
+
+        svg {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            color: var(--primary);
+        }
+
+        &:nth-child(1) {
+            background-color: rgba(white, 0.08);
+        }
+        &:nth-child(2) {
+            background-color: rgba(white, 0.12);
+        }
+        &:nth-child(3) {
+            background-color: rgba(white, 0.1);
+        }
+        &:nth-child(4) {
+            background-color: rgba(white, 0.075);
+        }
+    }
+
+    &-title {
+        font-weight: 600;
+        color: var(--contrast);
+        font-size: 1.5rem;
+        line-height: 1.1;
+        color: white;
+    }
+
+    p {
+        margin-top: 5px;
+        line-height: 1.2;
+        // opacity: 0.8;
+    }
+
+    &-hero {
+        grid-area: hero;
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include mq(xs) {
+            padding: 10px;
+        }
+
+        h2 {
+            position: relative;
+            padding-inline: 2vw;
+            margin-top: -30px;
+            text-align: center;
+        }
+
+        // img {
+        //   width: 450px;
+        //   margin: 0 auto 50px;
+        //   padding: 2rem;
+        // }
+        svg {
+            width: 300px;
+            @include mq(mobile) {
+                display: none;
+            }
+        }
+    }
+}
