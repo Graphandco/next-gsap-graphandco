@@ -18,10 +18,27 @@
     form {
         display: grid;
         gap: 30px;
+        padding-right: 30px;
         .form-group {
             display: grid;
             grid-template-columns: 1fr;
             align-items: top;
+            position: relative;
+
+            svg {
+                position: absolute;
+                bottom: 5px;
+                right: 10px;
+                color: #1cc31c;
+                transform: translateX(80px);
+                opacity: 0;
+                pointer-events: none;
+                transition: 0.2s ease-in-out;
+                &.valid {
+                    opacity: 1;
+                    transform: translateX(40px);
+                }
+            }
         }
         input,
         textarea {
@@ -37,6 +54,7 @@
         input {
             border: none;
             border-bottom: 1px solid var(--primary);
+            border-radius: 0;
         }
         textarea {
             margin-top: 30px;
@@ -47,5 +65,18 @@
         button {
             margin-left: auto;
         }
+    }
+}
+
+.emailsent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    svg {
+        max-width: 300px;
+    }
+    &__message {
+        color: var(--primary);
+        font-size: 20px;
     }
 }

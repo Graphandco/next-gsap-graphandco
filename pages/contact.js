@@ -1,5 +1,5 @@
-import Wrapper from "../src/layout/Wrapper"
-import Contact from "../src/views/Contact/Contact"
+import Wrapper from '../src/layout/Wrapper';
+import Contact from '../src/views/contact/Contact';
 
 const ContactPage = () => (
     <Wrapper
@@ -13,6 +13,6 @@ const ContactPage = () => (
     >
         <Contact />
     </Wrapper>
-)
+);
 
-export default ContactPage
+export default ContactPage;
