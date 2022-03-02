@@ -1,26 +1,20 @@
-import React, { useRef, useContext } from "react"
-import { gsap } from "gsap"
-import { SplitText } from "gsap/dist/SplitText"
-import { Box } from "theme-ui"
-import useIsomorphicLayoutEffect from "./useIsomorphicLayoutEffect"
-import { TransitionContext } from "../context/TransitionContext"
-import { randomNumber } from "./util"
+import React, { useRef, useContext } from 'react';
+import { gsap } from 'gsap';
+import { SplitText } from 'gsap/dist/SplitText';
+import { Box } from 'theme-ui';
+import useIsomorphicLayoutEffect from './useIsomorphicLayoutEffect';
+import { TransitionContext } from '../context/TransitionContext';
+import { randomNumber } from './util';
 
-gsap.registerPlugin(SplitText)
+gsap.registerPlugin(SplitText);
 
-const ImplodeExplodeInOut = ({
-    children,
-    target,
-    delay,
-    durationIn,
-    durationOut,
-}) => {
-    const { timeline } = useContext(TransitionContext)
-    const el = useRef()
+const ImplodeExplodeInOut = ({ children, target, delay, durationIn, durationOut }) => {
+    const { timeline } = useContext(TransitionContext);
+    const el = useRef();
 
     useIsomorphicLayoutEffect(() => {
-        const splitText = new SplitText(target)
-        const chars = splitText.chars
+        const splitText = new SplitText(target);
+        const chars = splitText.chars;
         chars.forEach((char) => {
             // intro animation
             gsap.fromTo(
@@ -33,7 +27,7 @@ const ImplodeExplodeInOut = ({
                     rotation: randomNumber(360, 720),
                     rotationX: randomNumber(-360, 360),
                     rotationY: randomNumber(-360, 360),
-                    ease: "power4.out",
+                    ease: 'power4.out',
                 },
                 {
                     x: 0,
@@ -43,11 +37,11 @@ const ImplodeExplodeInOut = ({
                     rotationX: 0,
                     rotationY: 0,
                     opacity: 1,
-                    duration: 1,
-                    delay: 1 + Math.random() * 0.5,
-                    ease: "power4.out",
+                    duration: durationIn || 0.75,
+                    delay: delay + Math.random() * 0.5 || 0.5 + Math.random() * 0.5,
+                    ease: 'power4.out',
                 }
-            )
+            );
 
             // outro animation
             timeline.add(
@@ -59,23 +53,23 @@ const ImplodeExplodeInOut = ({
                     rotation: randomNumber(360, 720),
                     rotationX: randomNumber(-360, 360),
                     rotationY: randomNumber(-360, 360),
-                    ease: "power4.in",
-                    duration: 0.1,
+                    ease: 'power4.in',
+                    duration: durationOut || 0.1,
                 }),
                 0
-            )
-        })
+            );
+        });
 
         gsap.set(el.current, {
             opacity: 1,
-        })
-    }, [])
+        });
+    }, []);
 
     return (
         <Box sx={{ opacity: 0 }} ref={el}>
             {children}
         </Box>
-    )
-}
+    );
+};
 
-export default ImplodeExplodeInOut
+export default ImplodeExplodeInOut;

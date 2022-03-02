@@ -1,18 +1,18 @@
-import FadeInOut from "../../animation/FadeInOut"
-import Pagetitle from "../../ui/PageTitle"
-import ContactForm from "./Contactform"
+import FadeInOut from '../../animation/FadeInOut';
+import Pagetitle from '../../ui/PageTitle';
+import ContactForm from './Contactform';
 
 const Contact = () => {
-  return (
-    <>
-      <section className="contact">
-        <Pagetitle title="Nous contacter" bodyID="contact" />
-        <FadeInOut x={-20} delay={1.8}>
-          <ContactForm />
-        </FadeInOut>
-      </section>
-    </>
-  )
-}
+    return (
+        <>
+            <section className="contact">
+                <Pagetitle title="Nous contacter" bodyID="contact" />
+                <FadeInOut x={-20} delay={1}>
+                    <ContactForm />
+                </FadeInOut>
+            </section>
+        </>
+    );
+};
 
-export default Contact
+export default Contact;

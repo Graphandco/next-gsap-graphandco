@@ -6,6 +6,7 @@ import LinkButton from '../../ui/LinkButton';
 import * as emailjs from 'emailjs-com';
 import { FaCheckCircle } from 'react-icons/fa';
 import LottieMail from '../../animation/lottie/LottieMail';
+import FadeInOut from '../../animation/FadeInOut';
 
 const ContactForm = () => {
     const router = useRouter();
@@ -56,26 +57,24 @@ const ContactForm = () => {
         } else if (!length10Regex.test(message)) {
             setError('Merci de renseigner un message valide (10 lettres minimum)');
         } else {
-            // emailjs.send(serviceID, templateID, data, userID).then(
-            //     function (response) {
-            //         console.log(response.status, response.text);
-            //         resetName();
-            //         resetEmail();
-            //         resetObject();
-            //         resetMessage();
-            //         setTimeout(function () {
-            //             console.log('envoyé !');
-            //         }, 3000);
-            //     },
-            //     function (err) {
-            //         console.log(err);
-            //     }
-            // );
-            console.log('ok');
-            setEmailSent(true);
-            setTimeout(function () {
-                router.push('/');
-            }, 3000);
+            emailjs.send(serviceID, templateID, data, userID).then(
+                function (response) {
+                    console.log(response.status, response.text);
+                    resetName();
+                    resetEmail();
+                    resetObject();
+                    resetMessage();
+                    setEmailSent(true);
+                    window.scrollTo(0, 0);
+                    setTimeout(function () {
+                        router.push('/');
+                    }, 2000);
+                },
+                function (err) {
+                    console.log(err);
+                }
+            );
+            // console.log('ok');
         }
     };
     return !emailSent ? (
@@ -108,7 +107,9 @@ const ContactForm = () => {
                     <LinkButton name="Envoyer" />
                 </form>
                 <div className="contact-form__image">
-                    <Image className="op5" width={400} height={250} src="/img/contact.svg" />
+                    <FadeInOut x={20} delay={1.5}>
+                        <Image className="op5" width={400} height={250} src="/img/contact.svg" />
+                    </FadeInOut>
                 </div>
             </div>
         </section>

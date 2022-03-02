@@ -65,6 +65,14 @@
         button {
             margin-left: auto;
         }
+        .form-error {
+            color: white;
+            background: darkred;
+            padding: 5px 20px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 17px;
+        }
     }
 }
 
@@ -73,7 +81,7 @@
     flex-direction: column;
     align-items: center;
     svg {
-        max-width: 300px;
+        max-width: 200px;
     }
     &__message {
         color: var(--primary);

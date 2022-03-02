@@ -1,51 +1,48 @@
 // import { Flex, Box, Text, Image, Button } from "theme-ui"
-import { useEffect } from "react"
-import ImplodeExplodeInOut from "../../animation/ImplodeExplodeInOut"
-import FadeInOutUp from "../../animation/FadeInOutUp"
-import ScaleInOut from "../../animation/ScaleInOut"
+import { useEffect } from 'react';
+import ImplodeExplodeInOut from '../../animation/ImplodeExplodeInOut';
+import FadeInOutUp from '../../animation/FadeInOutUp';
+import ScaleInOut from '../../animation/ScaleInOut';
 // import HomeAnimation from "../../animation/HomeAnimation"
-import LinkButton from "../../ui/LinkButton"
-import LottieRocket from "../../animation/lottie/LottieRocket"
+import LinkButton from '../../ui/LinkButton';
+import LottieRocket from '../../animation/lottie/LottieRocket';
 
 const Hero = () => {
-  useEffect(() => {
-    document.body.setAttribute("id", "index")
-    window.scrollTo(0, 0)
-    return () => {
-      document.body.removeAttribute("id", "index")
-    }
-  }, [])
+    useEffect(() => {
+        document.body.setAttribute('id', 'index');
+        window.scrollTo(0, 0);
+        return () => {
+            document.body.removeAttribute('id', 'index');
+        };
+    }, []);
 
-  return (
-    <>
-      <section className="hero">
-        <div className="hero-content container">
-          <FadeInOutUp delay={2} y={-40}>
-            <div className="hero-subtitle">Un métier, une passion</div>
-          </FadeInOutUp>
+    return (
+        <>
+            <section className="hero">
+                <div className="hero-content container">
+                    <FadeInOutUp delay={1} y={-40}>
+                        <div className="hero-subtitle">Un métier, une passion</div>
+                    </FadeInOutUp>
 
-          <ImplodeExplodeInOut target=".hero-title">
-            <div className="hero-title">Création de sites web</div>
-          </ImplodeExplodeInOut>
-          <FadeInOutUp delay={3}>
-            <div className="hero-description">
-              Nous sommes spécialisés dans la réalisation de sites web modernes
-              et intuitifs.
-            </div>
-          </FadeInOutUp>
-          <ScaleInOut as="div" delay={4} yellow>
-            <div className="hero-cta">
-              <LinkButton name="Voir nos prestations" link="/prestations" />
-            </div>
-          </ScaleInOut>
-        </div>
-        <FadeInOutUp delay={2.8} y={100}>
-          <div className="hero-lottie">
-            <LottieRocket />
-          </div>
-        </FadeInOutUp>
-      </section>
-      {/* <Flex
+                    <ImplodeExplodeInOut target=".hero-title">
+                        <div className="hero-title">Création de sites web</div>
+                    </ImplodeExplodeInOut>
+                    <FadeInOutUp delay={2}>
+                        <div className="hero-description">Nous sommes spécialisés dans la réalisation de sites web modernes et intuitifs.</div>
+                    </FadeInOutUp>
+                    <ScaleInOut as="div" delay={3} yellow>
+                        <div className="hero-cta">
+                            <LinkButton name="Voir nos prestations" link="/prestations" />
+                        </div>
+                    </ScaleInOut>
+                </div>
+                <FadeInOutUp delay={1.8} y={100}>
+                    <div className="hero-lottie">
+                        <LottieRocket />
+                    </div>
+                </FadeInOutUp>
+            </section>
+            {/* <Flex
             sx={{
                 p: [0, 4],
                 flex: 1,
@@ -106,8 +103,8 @@ const Hero = () => {
                 <HomeAnimation />
             </Box>
         </Flex> */}
-    </>
-  )
-}
+        </>
+    );
+};
 
-export default Hero
+export default Hero;

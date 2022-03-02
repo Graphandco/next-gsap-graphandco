@@ -13,7 +13,7 @@ const Pagetitle = ({ title, bodyID }) => {
             opacity: 1,
             duration: 1,
             x: 0,
-            delay: 0.5,
+            delay: 0.2,
             ease: 'elastic.out',
         });
     });
@@ -28,9 +28,7 @@ const Pagetitle = ({ title, bodyID }) => {
 
     return (
         <Title>
-            <ImplodeExplodeInOut delay=".5" target="h1">
-                {title}
-            </ImplodeExplodeInOut>
+            <ImplodeExplodeInOut target="h1">{title}</ImplodeExplodeInOut>
             <FadeInOut>
                 <TitleLine ref={lineRef} />
             </FadeInOut>
