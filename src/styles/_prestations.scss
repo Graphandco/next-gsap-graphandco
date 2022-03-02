@@ -124,3 +124,19 @@
         }
     }
 }
+
+.prestations-description {
+    min-height: 800px;
+    .svg-wrapper {
+        position: relative;
+
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    .prestations-top-content {
+        padding-left: clamp(50px, 13% + 12vw, 440px);
+    }
+}

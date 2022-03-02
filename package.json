@@ -1,6 +1,6 @@
 {
-  "name": "TweenPages",
-  "description": "Build complex animated page transitions with GSAP and Next.js",
+  "name": "Graph and Co",
+  "description": "Création de sites web modernes et intuitifs",
   "version": "0.1.0",
   "scripts": {
     "dev": "next",
@@ -29,6 +29,7 @@
     "theme-ui": "^0.13.1"
   },
   "devDependencies": {
+    "babel-plugin-inline-react-svg": "^2.0.1",
     "babel-plugin-styled-components": "^2.0.6",
     "onchange": "^7.1.0",
     "prettier": "^2.4.0"
@@ -36,6 +37,6 @@
   "resolutions": {
     "@babel/runtime": "^7.12.5"
   },
-  "repository": "https://github.com/johnpolacek/TweenPages",
+  "repository": "https://github.com/Graphandco/next-gsap-graphandco",
   "license": "MIT-0"
 }
