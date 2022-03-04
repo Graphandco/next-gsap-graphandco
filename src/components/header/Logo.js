@@ -32,7 +32,7 @@ const Logo = () => {
             <Link href="/">
                 <a>
                     <div>
-                        <div className="logo-image" ref={icon}>
+                        <div className="logo-image zzzzzzzz" ref={icon}>
                             <Image src="/img/logo.svg" alt="Site Logo" width={45} height={45} />
                         </div>
                     </div>
