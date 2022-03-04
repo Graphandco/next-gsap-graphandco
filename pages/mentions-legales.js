@@ -1,5 +1,5 @@
-import Wrapper from "../src/layout/Wrapper"
-import MentionsLegales from "../src/views/MentionsLegales"
+import MentionsLegales from '../src/components/mentions-politique/MentionsLegales';
+import Wrapper from '../src/layout/Wrapper';
 
 const MentionslegalesPage = () => (
     <Wrapper
@@ -13,6 +13,6 @@ const MentionslegalesPage = () => (
     >
         <MentionsLegales />
     </Wrapper>
-)
+);
 
-export default MentionslegalesPage
+export default MentionslegalesPage;

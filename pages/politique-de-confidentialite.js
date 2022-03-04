@@ -1,5 +1,5 @@
-import Wrapper from "../src/layout/Wrapper"
-import PolitiqueConfidentialite from "../src/views/PolitiqueConfidentialite"
+import Wrapper from '../src/layout/Wrapper';
+import PolitiqueConfidentialite from '../src/components/mentions-politique/PolitiqueConfidentialite';
 
 const PolitiqueConfidentialitePage = () => (
     <Wrapper
@@ -13,6 +13,6 @@ const PolitiqueConfidentialitePage = () => (
     >
         <PolitiqueConfidentialite />
     </Wrapper>
-)
+);
 
-export default PolitiqueConfidentialitePage
+export default PolitiqueConfidentialitePage;

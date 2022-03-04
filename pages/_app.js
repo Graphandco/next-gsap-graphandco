@@ -1,9 +1,9 @@
-import { TransitionProvider } from "../src/context/TransitionContext"
-import TransitionLayout from "../src/animation/TransitionLayout"
-import { Box } from "theme-ui"
-import Header from "../src/ui/Header"
-import Footer from "../src/views/Footer"
-import "../src/styles/style.scss"
+import { TransitionProvider } from '../src/context/TransitionContext';
+import TransitionLayout from '../src/animation/TransitionLayout';
+import Header from '../src/components/header/Header';
+
+import '../src/styles/style.scss';
+import Footer from '../src/components/footer/Footer';
 
 export default function MyApp({ Component, pageProps }) {
     return (
@@ -16,5 +16,5 @@ export default function MyApp({ Component, pageProps }) {
                 </div>
             </TransitionLayout>
         </TransitionProvider>
-    )
+    );
 }

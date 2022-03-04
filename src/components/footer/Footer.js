@@ -1,11 +1,11 @@
-import { useContext } from 'react';
+// import { useContext } from 'react';
 import { FaMobileAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
-import { TransitionContext } from '../context/TransitionContext';
+// import { TransitionContext } from '../context/TransitionContext';
 import Link from 'next/link';
 
 const Footer = () => {
-    const { background } = useContext(TransitionContext);
-    const linkColor = background === 'white' ? 'green' : 'var(--primary)';
+    // const { background } = useContext(TransitionContext);
+    // const linkColor = background === 'white' ? 'green' : 'var(--primary)';
 
     return (
         <footer className="footer">

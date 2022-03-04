@@ -1,5 +1,5 @@
-import Wrapper from "../src/layout/Wrapper"
-import Realisations from "../src/views/realisations/Realisations"
+import Wrapper from '../src/layout/Wrapper';
+import Realisations from '../src/components/realisations/Realisations';
 const RealisationsPage = () => {
     return (
         <Wrapper
@@ -13,7 +13,7 @@ const RealisationsPage = () => {
         >
             <Realisations />
         </Wrapper>
-    )
-}
+    );
+};
 
-export default RealisationsPage
+export default RealisationsPage;

@@ -1,5 +1,5 @@
-import Wrapper from "../src/layout/Wrapper"
-import Prestations from "../src/views/Prestations/Prestations"
+import Wrapper from '../src/layout/Wrapper';
+import Prestations from '../src/components/prestations/Prestations';
 
 const PrestationsPage = () => (
     <Wrapper
@@ -13,6 +13,6 @@ const PrestationsPage = () => (
     >
         <Prestations />
     </Wrapper>
-)
+);
 
-export default PrestationsPage
+export default PrestationsPage;

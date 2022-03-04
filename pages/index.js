@@ -1,7 +1,7 @@
 import Wrapper from '../src/layout/Wrapper';
-import Atouts from '../src/views/home/Atouts';
-import Competences from '../src/views/home/Competences';
-import Hero from '../src/views/home/Hero';
+import Atouts from '../src/components/home/Atouts';
+import Competences from '../src/components/home/Competences';
+import Hero from '../src/components/home/Hero';
 
 const IndexPage = () => (
     <Wrapper
