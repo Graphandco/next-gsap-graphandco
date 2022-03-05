@@ -4,14 +4,12 @@ import ContactForm from './Contactform';
 
 const Contact = () => {
     return (
-        <>
-            <section className="contact">
-                <Pagetitle title="Nous contacter" bodyID="contact" />
-                <FadeInOut x={-20} delay={1}>
-                    <ContactForm />
-                </FadeInOut>
-            </section>
-        </>
+        <section className="contact">
+            <Pagetitle title="Nous contacter" bodyID="contact" />
+            <FadeInOut x={-20} delay={1}>
+                <ContactForm />
+            </FadeInOut>
+        </section>
     );
 };
 
