@@ -1,6 +1,6 @@
 import FadeInOut from '../../animation/FadeInOut';
 import Pagetitle from '../../ui/PageTitle';
-import ContactForm from './Contactform';
+import ContactForm from './ContactFormMailJS';
 
 const Contact = () => {
     return (

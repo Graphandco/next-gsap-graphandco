@@ -1,5 +1,5 @@
 import Wrapper from '../src/layout/Wrapper';
-import Contact from '../src/components/contact-us/Contact';
+import Contact from '../src/components/contact/Contact';
 
 const ContactPage = () => (
     <Wrapper
