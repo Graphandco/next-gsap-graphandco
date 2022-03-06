@@ -7,7 +7,7 @@ const Contact = () => {
         <section className="contact">
             <Pagetitle title="Nous contacter" bodyID="contact" />
             <FadeInOut x={-20} delay={1}>
-                <ContactForm />
+                {/* <ContactForm /> */}
             </FadeInOut>
         </section>
     );
