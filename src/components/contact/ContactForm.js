@@ -4,9 +4,10 @@ import Image from 'next/image';
 import useInput from '../../hooks/useInput';
 import LinkButton from '../../ui/LinkButton';
 import * as emailjs from 'emailjs-com';
-import { FaCheckCircle } from 'react-icons/fa';
+import { FaCheck } from 'react-icons/fa';
 import LottieMail from '../../animation/lottie/LottieMail';
 import FadeInOut from '../../animation/FadeInOut';
+import useIsomorphicLayoutEffect from '../../animation/useIsomorphicLayoutEffect';
 
 const ContactForm = () => {
     const router = useRouter();
@@ -34,7 +35,7 @@ const ContactForm = () => {
     const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
     const userID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
 
-    useEffect(() => {
+    useIsomorphicLayoutEffect(() => {
         setError('');
     }, [name, email, object, message]);
 
@@ -45,9 +46,9 @@ const ContactForm = () => {
         message,
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(serviceID, templateID, userID);
+        //console.log(serviceID, templateID, userID);
         if (!length2Regex.test(name)) {
             setError('Merci de renseigner un nom valide (2 lettres minimum)');
         } else if (!emailRegex.test(email)) {
@@ -86,22 +87,22 @@ const ContactForm = () => {
                     <div className="form-group">
                         <label htmlFor="name">Votre nom:</label>
                         <input type="text" id="username" ref={nameRef} autoComplete="off" {...nameAttribs} required />
-                        <FaCheckCircle className={length2Regex.test(name) ? 'valid' : ''} />
+                        <FaCheck className={length2Regex.test(name) ? 'valid' : 'unvalid'} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="email">Votre email:</label>
                         <input type="text" id="useremail" ref={emailRef} autoComplete="off" {...emailAttribs} required />
-                        <FaCheckCircle className={emailRegex.test(email) ? 'valid' : ''} />
+                        <FaCheck className={emailRegex.test(email) ? 'valid' : 'unvalid'} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="subject">Objet du message:</label>
                         <input type="text" id="userobject" ref={objectRef} autoComplete="off" {...objectAttribs} required />
-                        <FaCheckCircle className={length5Regex.test(object) ? 'valid' : ''} />
+                        <FaCheck className={length5Regex.test(object) ? 'valid' : 'unvalid'} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="message">Votre message:</label>
                         <textarea type="text" id="usermessage" rows="8" ref={messageRef} autoComplete="off" {...messageAttribs} required />
-                        <FaCheckCircle className={length10Regex.test(message) ? 'valid' : ''} />
+                        <FaCheck className={length10Regex.test(message) ? 'valid' : 'unvalid'} />
                     </div>
                     {error && <div className="form-error">{error}</div>}
                     <LinkButton name="Envoyer" />

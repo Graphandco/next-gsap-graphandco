@@ -1,12 +1,12 @@
 import useIsomorphicLayoutEffect from '../animation/useIsomorphicLayoutEffect';
-import { useEffect, useContext } from 'react';
+import { useContext } from 'react';
 import { TransitionContext } from '../context/TransitionContext';
 import Head from './Head';
 
 const Layout = (props) => {
     const { setBackground } = useContext(TransitionContext);
 
-    useEffect(() => {
+    useIsomorphicLayoutEffect(() => {
         setBackground(props.background || 'white');
     }, [props.background]);
 
