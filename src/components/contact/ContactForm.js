@@ -75,7 +75,7 @@ const ContactForm = () => {
             //         console.log(err);
             //     }
             // );
-            console.log('okkk');
+            console.log('form ok');
             resetName();
             resetEmail();
             resetObject();
