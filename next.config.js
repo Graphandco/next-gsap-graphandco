@@ -3,8 +3,8 @@ const withMDX = require('@next/mdx')({
 });
 module.exports = withMDX({
     pageExtensions: ['js', 'jsx', 'md', 'mdx'],
-    experimental: {
-        // Enables the styled-components SWC transform
-        styledComponents: true,
-    },
+    // experimental: {
+    //     // Enables the styled-components SWC transform
+    //     styledComponents: true,
+    // },
 });
