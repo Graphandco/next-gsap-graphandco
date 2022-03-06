@@ -58,24 +58,33 @@ const ContactForm = () => {
         } else if (!length10Regex.test(message)) {
             setError('Merci de renseigner un message valide (10 lettres minimum)');
         } else {
-            emailjs.send(serviceID, templateID, data, userID).then(
-                function (response) {
-                    console.log(response.status, response.text);
-                    resetName();
-                    resetEmail();
-                    resetObject();
-                    resetMessage();
-                    setEmailSent(true);
-                    window.scrollTo(0, 0);
-                    setTimeout(function () {
-                        router.push('/');
-                    }, 2000);
-                },
-                function (err) {
-                    console.log(err);
-                }
-            );
-            // console.log('ok');
+            // emailjs.send(serviceID, templateID, data, userID).then(
+            //     function (response) {
+            //         console.log(response.status, response.text);
+            //         resetName();
+            //         resetEmail();
+            //         resetObject();
+            //         resetMessage();
+            //         setEmailSent(true);
+            //         window.scrollTo(0, 0);
+            //         setTimeout(function () {
+            //             router.push('/');
+            //         }, 2000);
+            //     },
+            //     function (err) {
+            //         console.log(err);
+            //     }
+            // );
+            console.log('ok');
+            resetName();
+            resetEmail();
+            resetObject();
+            resetMessage();
+            setEmailSent(true);
+            window.scrollTo(0, 0);
+            setTimeout(function () {
+                router.push('/');
+            }, 2000);
         }
     };
     return !emailSent ? (
