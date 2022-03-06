@@ -1,7 +1,7 @@
 import Wrapper from '../src/layout/Wrapper';
-import Contact from '../src/components/contact/Contact';
+import Contact from '../src/components/contact-us/Contact';
 
-const NousContacter = () => (
+const ContactPage = () => (
     <Wrapper
         url="https://tweenpages.vercel.app/two"
         title="Contact | Graph and Co"
@@ -15,4 +15,4 @@ const NousContacter = () => (
     </Wrapper>
 );
 
-export default NousContacter;
+export default ContactPage;
