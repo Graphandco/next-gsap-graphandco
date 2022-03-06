@@ -5,9 +5,7 @@ const PrestationsDescription = () => {
         <section className="prestations-description">
             <div className="prestations-description-wrapper container">
                 <h2>Nous réalisons le site taillé pour vous !</h2>
-                <div className="svg-wrapper">
-                    <SurMesure />
-                </div>
+                <div className="svg-wrapper">{/* <SurMesure /> */}</div>
                 <div className="prestations-top-content">
                     <p>
                         Nous avons à coeur de définir avec vous le site qui <strong>vous ressemble</strong>. En fonction de vos besoins nous établirons ensemble
