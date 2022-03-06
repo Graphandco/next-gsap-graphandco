@@ -1,5 +1,5 @@
 import Wrapper from '../src/layout/Wrapper';
-import Contact from '../src/components/contact/Contact';
+// import Contact from '../src/components/contact/Contact';
 
 const ContactPage = () => (
     <Wrapper
@@ -11,7 +11,8 @@ const ContactPage = () => (
         imageAlt="TweenPages Logo"
         background="linear-gradient(90deg, hsl(205deg 44% 21%), rgb(12, 16, 18))"
     >
-        <Contact />
+        {/* <Contact /> */}
+        Contact Page
     </Wrapper>
 );
 
