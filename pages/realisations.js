@@ -1,6 +1,26 @@
 import Wrapper from '../src/layout/Wrapper';
 import Realisations from '../src/components/realisations/Realisations';
-const RealisationsPage = () => {
+
+import { createClient } from 'contentful';
+
+export const getStaticProps = async () => {
+    const client = createClient({
+        space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+        accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_KEY,
+    });
+
+    const res = await client.getEntries({
+        content_type: 'realisations',
+    });
+
+    return {
+        props: {
+            realisations: res.items,
+        },
+    };
+};
+
+const RealisationsPage = (realisations) => {
     return (
         <Wrapper
             url="https://tweenpages.vercel.app/three"
@@ -11,7 +31,7 @@ const RealisationsPage = () => {
             imageAlt="TweenPages Logo"
             background="linear-gradient(90deg,#052233,black)"
         >
-            <Realisations />
+            <Realisations realisations={realisations.realisations} />
         </Wrapper>
     );
 };
