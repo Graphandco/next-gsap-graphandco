@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.16.7",
+    "@contentful/rich-text-react-renderer": "^15.11.1",
     "@gsap/business": "^3.9.1",
     "@mdx-js/loader": "^2.0.0",
     "@next/mdx": "^12.0.8",

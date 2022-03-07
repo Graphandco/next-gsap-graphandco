@@ -20,7 +20,7 @@ export const getStaticPaths = async () => {
 
     return {
         paths,
-        fallback: false,
+        fallback: true,
     };
 };
 
@@ -34,6 +34,7 @@ export const getStaticProps = async ({ params }) => {
         props: {
             realisation: res.items[0],
         },
+        revalidate: 1,
     };
 };
 

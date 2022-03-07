@@ -17,6 +17,7 @@ export const getStaticProps = async () => {
         props: {
             realisations: res.items,
         },
+        revalidate: 1,
     };
 };
 
