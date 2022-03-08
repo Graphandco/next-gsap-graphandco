@@ -30,14 +30,55 @@ const NavLink = ({ children, href, delay }) => {
 };
 
 const CustomLink = styled.a`
-    opacity: 0;
-    padding: 16px;
+    display: inline-block;
+    padding: 5px 16px;
     margin-top: 4px;
     font-size: 20px;
     font-weight: 600;
-    display: inline-block;
+    color: var(--text-color);
+    transition: 0.3s;
+    background: none !important;
     text-decoration: none;
     cursor: pointer;
+    opacity: 0;
+    @media (max-width: 767px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        text-align: center;
+        margin-top: 0;
+        &:before {
+            transition: 0s;
+        }
+        &.active:before {
+            left: calc(50% - 23px);
+        }
+        &:not(:last-child) {
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    }
+    &:hover,
+    &.active {
+        color: white;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 8px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: var(--primary);
+        z-index: -1;
+        transition: 0.3s;
+        opacity: 0;
+    }
+    &:hover:before,
+    &.active:before {
+        opacity: 1;
+    }
 `;
 
 export default NavLink;

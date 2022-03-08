@@ -33,50 +33,7 @@ header {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             padding-block: 10px;
-        }
-        a {
-            color: var(--text-color);
-            transition: 0.3s;
-            background: none !important;
-            &:hover,
-            &.active {
-                color: white;
-            }
-            &:before {
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: 8px;
-                width: 5px;
-                height: 5px;
-                border-radius: 50%;
-                background-color: var(--primary);
-                z-index: -1;
-                transition: 0.3s;
-                opacity: 0;
-            }
-            &:hover:before,
-            &.active:before {
-                opacity: 1;
-            }
-            @include mq(mobile) {
-                padding: 5px;
-                text-align: center;
-                // color: white;
-                margin-top: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                &:before {
-                    transition: 0s;
-                }
-                &:not(:last-child) {
-                    border-right: 1px solid rgba(white, 0.05);
-                }
-                &.active:before {
-                    left: calc(50% - 23px);
-                }
-            }
+            border-top: 1px solid rgb(white, 0.08);
         }
     }
 }
