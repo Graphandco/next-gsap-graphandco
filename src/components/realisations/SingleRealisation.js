@@ -8,9 +8,13 @@ import ScaleInOut from '../../animation/ScaleInOut';
 import { FaLongArrowAltLeft } from 'react-icons/fa';
 
 const SingleRealisation = ({ realisation }) => {
-    const { title, slug, content, link, logo } = realisation.fields;
+    const { title, slug, content, link } = realisation.fields;
     const image = realisation.fields.featured.fields.file;
-    const siteLogo = realisation.fields.logo.fields.file;
+    let siteLogo = '';
+    if (realisation.fields.logo) {
+        siteLogo = realisation.fields.logo.fields.file;
+    }
+
     return (
         <>
             <PageTitle title={title} bodyID={slug} />
@@ -19,7 +23,7 @@ const SingleRealisation = ({ realisation }) => {
                     <FadeInOut delay={1.2} x={-30}>
                         <div className="realisation__content">
                             <div className="realisation__description">
-                                <FadeInOut delay={3} x={30}>
+                                <FadeInOut delay={2} x={30}>
                                     <Link href="/realisations">
                                         <a className="realisation__back">
                                             <FaLongArrowAltLeft />
@@ -27,8 +31,7 @@ const SingleRealisation = ({ realisation }) => {
                                         </a>
                                     </Link>
                                 </FadeInOut>
-
-                                {logo && (
+                                {siteLogo && (
                                     <FadeInOut delay={1.8} y={-30}>
                                         <div className="realisation__logo">
                                             <Image src={'https:' + siteLogo.url} width={siteLogo.details.image.width} height={siteLogo.details.image.height} />
@@ -45,7 +48,7 @@ const SingleRealisation = ({ realisation }) => {
                     </FadeInOut>
                     <div className="realisation__featured">
                         <FadeInOut delay={1} x={30}>
-                            <Image src={'https:' + image.url} width={image.details.image.width} height={image.details.image.height} />
+                            <Image src={'https:' + image.url} width={image.details.image.width} height={image.details.image.height} quality={100} />
                         </FadeInOut>
                     </div>
                 </div>

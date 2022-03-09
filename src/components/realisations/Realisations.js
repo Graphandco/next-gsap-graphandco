@@ -6,13 +6,23 @@ import { FaLongArrowAltRight } from 'react-icons/fa';
 import GridTile2 from '../../ui/Gridtile2';
 import PageTitle from '../../ui/PageTitle';
 import SiteTile from './SiteTile';
+import GridItem from './GridItem';
 
 const Realisations = ({ realisations }) => {
     const responsive = useWindowSize();
 
-    // const{title, slug, featured} = realisations.realisations.fields
+    console.log(realisations);
 
-    // console.log(realisations);
+    //TRI DES RÉALISATIONs PAR POSITION
+    const nestedSort =
+        (prop1, prop2 = null, direction = 'asc') =>
+        (e1, e2) => {
+            const a = prop2 ? e1[prop1][prop2] : e1[prop1],
+                b = prop2 ? e2[prop1][prop2] : e2[prop1],
+                sortOrder = direction === 'asc' ? 1 : -1;
+            return a < b ? -sortOrder : a > b ? sortOrder : 0;
+        };
+    realisations.sort(nestedSort('fields', 'order', 'desc'));
 
     const data = [
         {
@@ -33,20 +43,20 @@ const Realisations = ({ realisations }) => {
     return (
         <>
             <PageTitle title="Nos réalisations" bodyID="realisations" />
-
-            {realisations.map((realisation) => (
-                <div key={realisation.fields.slug}>
-                    <div className="title">{realisation.fields.title}</div>
-                    <Image
-                        src={'https:' + realisation.fields.featured.fields.file.url}
+            <div className="realisations-grid">
+                {realisations.map((realisation) => (
+                    <GridItem
+                        key={realisation.fields.slug}
+                        title={realisation.fields.title}
+                        slug={realisation.fields.slug}
+                        imgSrc={'https:' + realisation.fields.featured.fields.file.url}
                         width={realisation.fields.featured.fields.file.details.image.width}
                         height={realisation.fields.featured.fields.file.details.image.height}
+                        description={realisation.fields.description}
+                        url={realisation.fields.link}
                     />
-                    <Link href={'/realisations/' + realisation.fields.slug}>
-                        <a>Voir</a>
-                    </Link>
-                </div>
-            ))}
+                ))}
+            </div>
 
             <section className="realisations__grid">
                 <SiteTile
@@ -85,19 +95,19 @@ const Realisations = ({ realisations }) => {
                 </GridTile2>
                 <GridTile2 bg="url(/projects/peche-exotique.jpg)">
                     {/* <Text
-                        as="p"
-                        sx={{
-                            fontWeight: 900,
-                            fontSize: [2, 3],
-                            textAlign: "center",
-                            px: 3,
-                            maxWidth: "200px",
-                            mx: "auto",
-                            lineHeight: 1.3,
-                        }}
-                    >
-                        Created by Graph and Co
-                    </Text> */}
+as="p"
+sx={{
+fontWeight: 900,
+fontSize: [2, 3],
+textAlign: "center",
+px: 3,
+maxWidth: "200px",
+mx: "auto",
+lineHeight: 1.3,
+}}
+>
+Created by Graph and Co
+</Text> */}
                 </GridTile2>
 
                 <GridTile2 bg="var(--color4)">
@@ -165,15 +175,15 @@ const Realisations = ({ realisations }) => {
                                 }}
                             >
                                 {/* <Image
-                                width="24"
-                                height="24"
-                                sx={{
-                                    ml: [-2, -3, -2],
-                                    mr: [2, 3, 2],
-                                    width: ["18px", "24px"],
-                                }}
-                                src="/img/double-right-white.svg"
-                            /> */}
+width="24"
+height="24"
+sx={{
+ml: [-2, -3, -2],
+mr: [2, 3, 2],
+width: ["18px", "24px"],
+}}
+src="/img/double-right-white.svg"
+/> */}
                                 docs
                             </Button>
                         </A>

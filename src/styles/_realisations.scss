@@ -95,3 +95,48 @@
         max-width: 120px;
     }
 }
+/*--------------------
+  GRID
+----------------------*/
+.realisations-grid {
+    .loide-guitare {
+        grid-area: loide;
+    }
+    .boatman {
+        grid-area: boatman;
+    }
+    .peche-exotique {
+        grid-area: exotique;
+    }
+    .willow-tarot {
+        grid-area: willow;
+    }
+    .la-toscana {
+        grid-area: toscana;
+    }
+    .trois-frontieres-peche {
+        grid-area: troisfp;
+    }
+    .burgerio {
+        grid-area: burgerio;
+    }
+    .fylo {
+        grid-area: fylo;
+    }
+    .barber-shop {
+        grid-area: barber;
+    }
+
+    a {
+        display: block;
+    }
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        'loide loide boatman boatman'
+        'loide loide exotique exotique'
+        'willow willow toscana toscana'
+        'troisfp burgerio barber fylo';
+}
