@@ -4,7 +4,7 @@ import { Box } from 'theme-ui';
 import useIsomorphicLayoutEffect from './useIsomorphicLayoutEffect';
 import { TransitionContext } from '../context/TransitionContext';
 
-const AnimateInOut = ({ children, as, from, to, durationIn, durationOut, delay, delayOut, set, skipOutro }) => {
+const AnimateInOut = ({ children, as, from, to, durationIn, durationOut, delay, delayOut, set, skipOutro, className }) => {
     const { timeline } = useContext(TransitionContext);
     const el = useRef();
 
@@ -33,7 +33,7 @@ const AnimateInOut = ({ children, as, from, to, durationIn, durationOut, delay, 
     }, []);
 
     return (
-        <Box as={as} sx={from} ref={el}>
+        <Box as={as} sx={from} ref={el} className={className || ''}>
             {children}
         </Box>
     );

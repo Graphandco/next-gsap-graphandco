@@ -52,13 +52,16 @@ const Realisations = ({ realisations }) => {
                         imgSrc={'https:' + realisation.fields.featured.fields.file.url}
                         width={realisation.fields.featured.fields.file.details.image.width}
                         height={realisation.fields.featured.fields.file.details.image.height}
+                        coverSrc={'https:' + realisation.fields.cover.fields.file.url}
+                        coverWidth={realisation.fields.cover.fields.file.details.image.width}
+                        coverHeight={realisation.fields.cover.fields.file.details.image.height}
                         description={realisation.fields.description}
                         url={realisation.fields.link}
                     />
                 ))}
             </div>
 
-            <section className="realisations__grid">
+            {/* <section className="realisations__grid">
                 <SiteTile
                     name="Loïde Guitare"
                     desc="Site vitrine pour un créateur de guitares originales en tissu"
@@ -94,20 +97,20 @@ const Realisations = ({ realisations }) => {
                     <Image className="op5" width={48} height={48} src="/img/icons/auto_awesome_24dp.svg" />
                 </GridTile2>
                 <GridTile2 bg="url(/projects/peche-exotique.jpg)">
-                    {/* <Text
-as="p"
-sx={{
-fontWeight: 900,
-fontSize: [2, 3],
-textAlign: "center",
-px: 3,
-maxWidth: "200px",
-mx: "auto",
-lineHeight: 1.3,
-}}
->
-Created by Graph and Co
-</Text> */}
+                    <Text
+                        as="p"
+                        sx={{
+                            fontWeight: 900,
+                            fontSize: [2, 3],
+                            textAlign: 'center',
+                            px: 3,
+                            maxWidth: '200px',
+                            mx: 'auto',
+                            lineHeight: 1.3,
+                        }}
+                    >
+                        Created by Graph and Co
+                    </Text>
                 </GridTile2>
 
                 <GridTile2 bg="var(--color4)">
@@ -174,16 +177,16 @@ Created by Graph and Co
                                     color: 'white',
                                 }}
                             >
-                                {/* <Image
-width="24"
-height="24"
-sx={{
-ml: [-2, -3, -2],
-mr: [2, 3, 2],
-width: ["18px", "24px"],
-}}
-src="/img/double-right-white.svg"
-/> */}
+                                <Image
+                                    width="24"
+                                    height="24"
+                                    sx={{
+                                        ml: [-2, -3, -2],
+                                        mr: [2, 3, 2],
+                                        width: ['18px', '24px'],
+                                    }}
+                                    src="/img/double-right-white.svg"
+                                />
                                 docs
                             </Button>
                         </A>
@@ -220,7 +223,7 @@ src="/img/double-right-white.svg"
                 <GridTile2 display={['none', 'flex']} bg="var(--color2)">
                     <Image className="op5" width={48} height={48} src="/img/icons/bolt_24dp.svg" />
                 </GridTile2>
-            </section>
+            </section> */}
         </>
     );
 };
