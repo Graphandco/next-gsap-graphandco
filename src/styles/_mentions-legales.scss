@@ -1,0 +1,12 @@
+.mentions-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    padding-bottom: 30px;
+    @include mq(tablet) {
+        grid-template-columns: 1fr;
+    }
+    p {
+        margin: 10px 0 5px 0;
+    }
+}

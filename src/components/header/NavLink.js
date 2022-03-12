@@ -31,8 +31,8 @@ const NavLink = ({ children, href, delay }) => {
 
 const CustomLink = styled.a`
     display: inline-block;
-    padding: 5px 16px;
-    margin-top: 4px;
+    padding: 0 16px;
+    /* margin-top: 4px; */
     font-size: 20px;
     font-weight: 600;
     color: var(--text-color);

@@ -23,6 +23,7 @@ header {
         }
     }
     nav {
+        margin-top: 5px;
         @include mq(mobile) {
             position: fixed;
             bottom: 0;
@@ -34,6 +35,7 @@ header {
             grid-template-columns: repeat(4, 1fr);
             padding-block: 10px;
             border-top: 1px solid rgb(white, 0.08);
+            border-radius: 3px 3px 0 0;
         }
     }
 }

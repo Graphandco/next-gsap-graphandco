@@ -89,7 +89,11 @@ const ContactForm = () => {
     };
     return !emailSent ? (
         <section className="contact-form container">
-            <p>N'hésitez pas à nous contacter pour toute demande d'information ! Nous nous ferons un plaisir de revenir vers vous rapidement.</p>
+            <p>
+                Vous avez un projet web ? Nous sommes là pour vous conseiller et vous guider en fonction de vos besoins et de votre budget. Chaque projet est
+                différent et demande réflexion et échanges autour d'un café afin de cibler les besoins. <br></br>N'hésitez pas à nous contacter pour toute
+                demande d'information ! Nous nous ferons un plaisir de revenir vers vous rapidement.
+            </p>
 
             <div className="contact-form__wrapper">
                 <form onSubmit={handleSubmit}>

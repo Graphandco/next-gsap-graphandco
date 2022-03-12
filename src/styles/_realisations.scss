@@ -102,9 +102,9 @@
     .grid-item {
         min-height: 200px;
         a {
-            display: block;
             height: 100%;
             background-size: cover;
+            background-position: center;
             display: flex;
             align-items: flex-end;
             justify-content: flex-end;

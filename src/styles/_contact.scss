@@ -1,3 +1,11 @@
+.contact-form {
+    p {
+        width: 50%;
+        @include mq(mobile) {
+            width: 100%;
+        }
+    }
+}
 .contact-form__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -18,7 +26,6 @@
     form {
         display: grid;
         gap: 30px;
-        padding-right: 30px;
         .form-group {
             display: grid;
             grid-template-columns: 1fr;
@@ -28,16 +35,16 @@
             svg {
                 position: absolute;
                 bottom: 5px;
-                right: 10px;
+                right: 5px;
                 font-size: 14px;
                 color: #1cc31c;
-                transform: translateX(80px);
+                transform: translateX(20px);
                 opacity: 0;
                 pointer-events: none;
                 transition: 0.2s ease-in-out;
                 &.valid {
                     opacity: 1;
-                    transform: translateX(40px);
+                    transform: translateX(0px);
                 }
             }
         }
