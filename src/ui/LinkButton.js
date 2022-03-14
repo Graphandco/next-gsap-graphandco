@@ -38,6 +38,10 @@ const Button = styled.button`
         clip-path: circle(0% at 0 100%);
         transition: 0.4s ease-in-out;
     }
+    a {
+        display: grid;
+        place-items: center;
+    }
 
     span {
         padding-inline: 10px;
