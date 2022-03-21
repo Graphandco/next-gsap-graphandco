@@ -1,12 +1,36 @@
-import SurMesure from './sur-mesure.svg';
+import { useEffect } from 'react';
 import Link from 'next/link';
+import PrestationsSVG from './PrestationsSVG';
+import { gsap } from 'gsap/dist/gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
 const PrestationsDescription = () => {
+    useEffect(() => {
+        gsap.from('#main_droite', {
+            x: -700,
+            duration: 2,
+            scrollTrigger: {
+                trigger: '#main_droite',
+                start: 'top bottom-=250',
+            },
+        });
+        gsap.from('#ruban', {
+            x: -700,
+            duration: 2,
+            scrollTrigger: {
+                trigger: '#main_droite',
+                start: 'top bottom-=250',
+            },
+        });
+    }, []);
+
     return (
         <section className="prestations-description">
             <div className="prestations-description-wrapper container">
                 <h2>Nous réalisons le site taillé pour vous !</h2>
                 <div className="svg-wrapper">
-                    <SurMesure />
+                    <PrestationsSVG />
                 </div>
                 <div className="prestations-top-content">
                     <p>

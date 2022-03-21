@@ -124,17 +124,71 @@
 }
 
 .prestations-description {
-    min-height: 800px;
+    min-height: 680px;
+    h2 {
+        text-align: center;
+        padding: 20px 0 50px 0;
+    }
     .svg-wrapper {
         position: relative;
+        max-width: 1030px;
 
         svg {
             position: absolute;
-            top: 0;
+            top: -140px;
             left: 0;
+            pointer-events: none;
         }
     }
     .prestations-top-content {
-        padding-left: clamp(50px, 13% + 12vw, 440px);
+        // padding-left: clamp(50px, 13% + 12vw, 440px);
+        padding-left: 250px;
+        position: relative;
+        // padding-top: 80px;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 220px;
+            width: 2px;
+            height: 100%;
+            background: var(--primary);
+            border-radius: 10px;
+        }
+    }
+}
+
+.prestations-tools {
+    padding-left: 100px;
+    padding-bottom: 70px;
+    max-width: 930px;
+
+    h3 {
+        text-align: center;
+        color: white;
+        margin-bottom: 40px;
+    }
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+
+        .tool-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            width: 100px;
+
+            &-name {
+                text-transform: uppercase;
+                font-size: 16px;
+                color: white;
+            }
+            img {
+                object-fit: contain;
+            }
+        }
     }
 }

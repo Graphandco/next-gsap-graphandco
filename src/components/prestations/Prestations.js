@@ -5,6 +5,7 @@ import { IoIosRocket } from 'react-icons/io';
 import PrestationsPack from './PrestationsPack';
 import Pagetitle from '../../ui/PageTitle';
 import PrestationsDescription from './PrestationsDescription';
+import PrestationsOutils from './PrestationsOutils';
 
 const Prestations = () => {
     const packs = [
@@ -91,6 +92,7 @@ const Prestations = () => {
                 </div>
             </section>
             <PrestationsDescription />
+            <PrestationsOutils />
         </>
     );
 };

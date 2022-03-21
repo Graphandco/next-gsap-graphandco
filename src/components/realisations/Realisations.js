@@ -44,7 +44,7 @@ const Realisations = ({ realisations }) => {
         <>
             <PageTitle title="Nos réalisations" bodyID="realisations" />
             <div className="realisations-grid">
-                {realisations.map((realisation) => (
+                {realisations?.map((realisation) => (
                     <GridItem
                         key={realisation.fields.slug}
                         title={realisation.fields.title}
