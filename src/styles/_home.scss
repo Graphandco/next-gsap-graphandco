@@ -114,7 +114,7 @@
 ----------------------*/
 .atouts {
     &-wrapper {
-        margin-top: -4vw;
+        margin-top: -8vw;
         position: relative;
         z-index: 0;
         display: grid;
@@ -273,9 +273,12 @@
         flex-direction: column;
         justify-content: center;
         gap: 15px;
-        padding-block: clamp(50px, 6vw, 100px);
+        padding-block: clamp(170px, 10vw, 200px);
         padding-inline: 15vw 2vw;
         clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0% 100%);
+        // @include mq(tablet) {
+        //     padding-block: clamp(50px, 6vw, 100px);
+        // }
         .responsive-title {
             color: var(--secondary);
         }

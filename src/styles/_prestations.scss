@@ -125,25 +125,46 @@
 
 .prestations-description {
     min-height: 680px;
+    @include mq(mobile) {
+        min-height: 100%;
+    }
     h2 {
         text-align: center;
         padding: 20px 0 50px 0;
+        @include mq(mobile) {
+            padding-bottom: 20px;
+            margin-bottom: 0;
+        }
     }
     .svg-wrapper {
         position: relative;
         max-width: 1030px;
+        margin: auto;
 
+        @include mq(mobile) {
+            max-width: 600px;
+        }
         svg {
             position: absolute;
             top: -140px;
             left: 0;
             pointer-events: none;
+            @include mq(mobile) {
+                position: static;
+            }
         }
     }
     .prestations-top-content {
         // padding-left: clamp(50px, 13% + 12vw, 440px);
         padding-left: 250px;
         position: relative;
+        @include mq(tablet) {
+            padding-left: calc(22%);
+            max-width: 730px;
+        }
+        @include mq(mobile) {
+            padding-left: 0;
+        }
         // padding-top: 80px;
         &:before {
             content: '';
@@ -154,6 +175,10 @@
             height: 100%;
             background: var(--primary);
             border-radius: 10px;
+
+            @include mq(tablet) {
+                content: none;
+            }
         }
     }
 }
@@ -162,6 +187,15 @@
     padding-left: 100px;
     padding-bottom: 70px;
     max-width: 930px;
+
+    @include mq(tablet) {
+        padding-left: 0;
+        max-width: 80%;
+    }
+
+    @include mq(mobile) {
+        max-width: 100%;
+    }
 
     h3 {
         text-align: center;
@@ -173,6 +207,10 @@
         display: flex;
         flex-wrap: wrap;
         gap: 25px;
+
+        @include mq(mobile) {
+            justify-content: center;
+        }
 
         .tool-item {
             display: flex;
