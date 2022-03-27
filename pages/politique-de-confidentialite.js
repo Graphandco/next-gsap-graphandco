@@ -8,7 +8,7 @@ const PolitiqueConfidentialitePage = () => (
         description="Politique de confidentialité du site graphandco.com"
         twitter="johnpolacek"
         imageUrl="https://tweenpages.vercel.app/project-logo.png"
-        imageAlt="TweenPages Logo"
+        imageAlt="Logo Graph and Co"
         background="linear-gradient(90deg, hsl(205deg 44% 21%), rgb(12, 16, 18))"
     >
         <PolitiqueConfidentialite />

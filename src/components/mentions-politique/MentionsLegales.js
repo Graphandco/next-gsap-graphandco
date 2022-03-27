@@ -1,5 +1,5 @@
 import FadeInOut from '../../animation/FadeInOut';
-import Pagetitle from '../../ui/PageTitle';
+import Pagetitle from '../PageTitle';
 
 const MentionsLegales = () => {
     return (

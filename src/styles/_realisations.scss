@@ -72,7 +72,7 @@
     &__wrapper {
         display: grid;
         grid-template-columns: 1fr 1.3fr;
-        align-items: center;
+        // align-items: center;
         gap: 5vw;
         @include mq(mobile) {
             grid-template-columns: 1fr;

@@ -26,7 +26,7 @@ const RealisationsPage = (realisations) => {
         <Wrapper
             url="https://tweenpages.vercel.app/three"
             title="Réalisations | Graph and Co"
-            description="Demo of TweenPages with a complex transition to page number three"
+            description="Sies réalisés par Graph and Co"
             twitter="johnpolacek"
             imageUrl="https://tweenpages.vercel.app/project-logo.png"
             imageAlt="TweenPages Logo"

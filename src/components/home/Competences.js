@@ -1,12 +1,9 @@
-import Image from 'next/image';
-import BounceComing from '../../animation/BounceComing';
-import FadeInOut from '../../animation/FadeInOut';
-import LinkButton from '../../ui/LinkButton';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { useWindowSize } from '../../hooks/useWindowSize';
 import { gsap } from 'gsap/dist/gsap';
 import { useEffect, useRef } from 'react';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import LinkButton from '../LinkButton';
 gsap.registerPlugin(ScrollTrigger);
 
 const Competences = ({ texts }) => {

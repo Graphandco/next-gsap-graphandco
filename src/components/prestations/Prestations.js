@@ -3,9 +3,9 @@ import FadeInOut from '../../animation/FadeInOut';
 import { GiMuscleUp } from 'react-icons/gi';
 import { IoIosRocket } from 'react-icons/io';
 import PrestationsPack from './PrestationsPack';
-import Pagetitle from '../../ui/PageTitle';
 import PrestationsDescription from './PrestationsDescription';
 import PrestationsOutils from './PrestationsOutils';
+import Pagetitle from '../PageTitle';
 
 const Prestations = () => {
     const packs = [

@@ -39,12 +39,12 @@ export const getStaticProps = async ({ params }) => {
 };
 
 const Realisation = (realisation) => {
-    console.log(realisation);
+    // console.log(realisation);
     return (
         <Wrapper
             url="https://tweenpages.vercel.app/two"
             title={`${realisation.realisation.fields.title} | Graph and Co`}
-            description="Demo of TweenPages with a complex transition to page number two"
+            description={`Présentation de la réalisation du site ${realisation.realisation.fields.title}`}
             twitter="johnpolacek"
             imageUrl="https://tweenpages.vercel.app/project-logo.png"
             imageAlt="TweenPages Logo"

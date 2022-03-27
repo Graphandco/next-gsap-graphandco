@@ -2,12 +2,12 @@ import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import useInput from '../../hooks/useInput';
-import LinkButton from '../../ui/LinkButton';
 import * as emailjs from 'emailjs-com';
 import { FaCheck } from 'react-icons/fa';
 import LottieMail from '../../animation/lottie/LottieMail';
 import FadeInOut from '../../animation/FadeInOut';
 import useIsomorphicLayoutEffect from '../../animation/useIsomorphicLayoutEffect';
+import LinkButton from '../LinkButton';
 
 const ContactForm = () => {
     const router = useRouter();

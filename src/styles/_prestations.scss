@@ -156,7 +156,7 @@
     }
     .prestations-top-content {
         // padding-left: clamp(50px, 13% + 12vw, 440px);
-        padding-left: 250px;
+        padding-left: 30%;
         position: relative;
         @include mq(tablet) {
             padding-left: calc(22%);
@@ -170,7 +170,7 @@
             content: '';
             position: absolute;
             top: 0;
-            left: 220px;
+            left: calc(30% - 30px);
             width: 2px;
             height: 100%;
             background: var(--primary);

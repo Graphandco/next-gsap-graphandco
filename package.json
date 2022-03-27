@@ -8,7 +8,8 @@
     "start": "next start",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "format-watch": "npm run format && onchange \"**/*.{js,jsx,json,md}\" -- prettier --write {{changed}}",
-    "deploy": "npm run test && git push origin main && vercel --prod"
+    "deploy": "npm run test && git push origin main && vercel --prod",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@babel/runtime": "^7.16.7",
@@ -24,6 +25,7 @@
     "gsap": "npm:@gsap/business@^3.7.1",
     "lottie-react": "^2.2.1",
     "next": "^12.0.8",
+    "next-sitemap": "^2.5.14",
     "prism-react-renderer": "^1.2.1",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
