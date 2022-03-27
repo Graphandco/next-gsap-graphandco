@@ -8,8 +8,7 @@
     "start": "next start",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "format-watch": "npm run format && onchange \"**/*.{js,jsx,json,md}\" -- prettier --write {{changed}}",
-    "deploy": "npm run test && git push origin main && vercel --prod",
-    "postbuild": "next-sitemap"
+    "deploy": "npm run test && git push origin main && vercel --prod"
   },
   "dependencies": {
     "@babel/runtime": "^7.16.7",
