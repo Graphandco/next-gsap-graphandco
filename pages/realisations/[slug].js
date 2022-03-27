@@ -1,6 +1,8 @@
+import { useEffect } from 'react';
 import { createClient } from 'contentful';
 import Wrapper from '../../src/layout/Wrapper';
 import SingleRealisation from '../../src/components/realisations/SingleRealisation';
+import { useEffect } from 'react/cjs/react.production.min';
 
 const client = createClient({
     space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -8,20 +10,22 @@ const client = createClient({
 });
 
 export const getStaticPaths = async () => {
-    const res = await client.getEntries({
-        content_type: 'realisations',
-    });
+    useEffect(() => {
+        const res = await client.getEntries({
+            content_type: 'realisations',
+        });
 
-    const paths = res.items.map((item) => {
+        const paths = res.items.map((item) => {
+            return {
+                params: { slug: item.fields.slug },
+            };
+        });
+
         return {
-            params: { slug: item.fields.slug },
+            paths,
+            fallback: true,
         };
-    });
-
-    return {
-        paths,
-        fallback: true,
-    };
+    }, []);
 };
 
 export const getStaticProps = async ({ params }) => {
