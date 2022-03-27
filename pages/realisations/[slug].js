@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { createClient } from 'contentful';
 import Wrapper from '../../src/layout/Wrapper';
 import SingleRealisation from '../../src/components/realisations/SingleRealisation';
-import { useEffect } from 'react/cjs/react.production.min';
 
 const client = createClient({
     space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
