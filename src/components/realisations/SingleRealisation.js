@@ -15,7 +15,7 @@ const SingleRealisation = ({ realisation }) => {
         siteLogo = realisation.fields.logo.fields.file;
     }
 
-    return (
+    return realisation.fields ? (
         <>
             <PageTitle title={title} bodyID={slug} />
             <section className="realisation">
@@ -54,6 +54,8 @@ const SingleRealisation = ({ realisation }) => {
                 </div>
             </section>
         </>
+    ) : (
+        <div>Loading</div>
     );
 };
 

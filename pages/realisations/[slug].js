@@ -14,7 +14,7 @@ export const getStaticPaths = async () => {
 
     const paths = res.items.map((item) => {
         return {
-            params: { slug: item.fields?.slug },
+            params: { slug: item.fields.slug },
         };
     });
 
@@ -39,7 +39,7 @@ export const getStaticProps = async ({ params }) => {
 };
 
 const Realisation = (realisation) => {
-    // console.log(realisation);
+    console.log(realisation.realisation);
     return (
         <Wrapper
             url="https://tweenpages.vercel.app/two"
