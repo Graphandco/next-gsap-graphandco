@@ -38,19 +38,18 @@ export const getStaticProps = async ({ params }) => {
     };
 };
 
-const Realisation = (realisation) => {
-    console.log(realisation.realisation);
+const Realisation = ({ realisation }) => {
     return (
         <Wrapper
-            url="https://tweenpages.vercel.app/two"
-            title={`${realisation.realisation.fields.title} | Graph and Co`}
-            description={`Présentation de la réalisation du site ${realisation.realisation.fields.title}`}
-            twitter="johnpolacek"
-            imageUrl="https://tweenpages.vercel.app/project-logo.png"
-            imageAlt="TweenPages Logo"
+            url="https://www.graphandco.com"
+            title={`${realisation.fields.title} | Graph and Co`}
+            description={`Présentation du site ${realisation.fields.title}`}
+            twitter="graphandco"
+            imageUrl="https://sites.graphandco.com/wp-content/uploads/2022/02/logo.png"
+            imageAlt="Graph and Co"
             background="linear-gradient(90deg, hsl(205deg 44% 21%), rgb(12, 16, 18))"
         >
-            <SingleRealisation realisation={realisation.realisation} />
+            <SingleRealisation realisation={realisation} />
         </Wrapper>
     );
 };
