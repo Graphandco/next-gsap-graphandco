@@ -16,8 +16,8 @@ const Hero = () => {
 
     return (
         <>
-            <section className="hero">
-                <div className="hero-content container">
+            <section className="hero container">
+                <div className="hero-content">
                     <FadeInOutUp delay={1} y={-40}>
                         <div className="hero-subtitle">Un métier, une passion</div>
                     </FadeInOutUp>

@@ -6,12 +6,15 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import LinkButton from '../LinkButton';
 gsap.registerPlugin(ScrollTrigger);
 
-const Competences = ({ texts }) => {
+const Competences = ({ texts, pourquoiUnSite }) => {
+    const pourquoiContent = pourquoiUnSite.fields.content;
+    const pourquoiTitle = pourquoiUnSite.fields.title;
+
     const { title, content } = texts.fields;
     const titleFirstLine = title.split(' ').slice(0, 2).join(' ');
     const titleSecondLine = title.split(' ').slice(2, 5).join(' ');
 
-    const responsive = useWindowSize();
+    // const responsive = useWindowSize();
 
     useEffect(() => {
         gsap.from(titleFirstLineRef.current, {
@@ -54,7 +57,7 @@ const Competences = ({ texts }) => {
             },
         });
 
-        ScrollTrigger.batch('.yellow-block-content p', {
+        ScrollTrigger.batch('.competences-wrapper p', {
             once: true,
             interval: 0.1,
             onEnter: (elements) => {
@@ -77,35 +80,8 @@ const Competences = ({ texts }) => {
 
     return (
         <>
-            {/* <section className="competences">
-                <div className="video-wrapper">
-                    <video src="/img/computer-video.mp4" autoPlay loop muted></video>
-                </div>
-                <div className="competences-wrapper container">
-                    <div className="competences-inner">
-                        <div className="competences-text">
-                            {content.map((p, index) => (
-                                <p key={index} dangerouslySetInnerHTML={{ __html: p }}></p>
-                            ))}
-                            <div className="competences-cta">
-                                <LinkButton name="Voir nos réalisations" link="/realisations" />
-                            </div>
-                        </div>
-                        <div className="competences-image">
-                            <FadeInOut y={-20} delay={1.8} className="prestations__lead__image">
-                                <Image width={500} height={650} src="/img/home-prestations.svg" />
-                                <BounceComing target=".competences h2">
-                                    <h2>
-                                        Nos compétences<br></br> à votre service
-                                    </h2>
-                                </BounceComing>
-                            </FadeInOut>
-                        </div>
-                    </div>
-                </div>
-            </section> */}
             <section className="competences">
-                {responsive !== 'mobile' && responsive !== 'tablet' && (
+                <div ref={textRef} className="competences-wrapper container">
                     <div className="title-lead">
                         <h2 ref={titleRef}>
                             <div className="first-line" ref={titleFirstLineRef}>
@@ -119,23 +95,11 @@ const Competences = ({ texts }) => {
                             <LinkButton name="Voir nos réalisations" link="/realisations" />
                         </div>
                     </div>
-                )}
-                <div className="yellow-block">
-                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            fill="#1E394D"
-                            d="M61.5,-16.9C71,9.3,64,43.9,46,55.1C27.9,66.3,-1.2,54,-26.4,35.8C-51.5,17.6,-72.8,-6.5,-67.7,-26.5C-62.7,-46.5,-31.3,-62.5,-2.7,-61.7C26,-60.8,52,-43.1,61.5,-16.9Z"
-                            transform="translate(100 100)"
-                        />
-                    </svg>
-                    {responsive !== 'desktop' && <h2 className="responsive-title">{title}</h2>}
-                    <div ref={textRef} className="yellow-block-content">
-                        {documentToReactComponents(content)}
-                        {responsive !== 'desktop' && (
-                            <div ref={btnRef} className="competences-cta">
-                                <LinkButton dark name="Voir nos réalisations" link="/realisations" />
-                            </div>
-                        )}
+                    <div className="competences-content">{documentToReactComponents(content)}</div>
+
+                    <div className="competences-subcontent">
+                        <h3>{pourquoiTitle}</h3>
+                        {documentToReactComponents(pourquoiContent)}
                     </div>
                 </div>
             </section>

@@ -45,11 +45,31 @@
 ----------------------*/
 .competences {
     position: relative;
-    .title-lead {
+    background-color: rgba(white, 0.02);
+    &:before {
+        content: '';
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 6vw;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 350px;
+        background-color: rgba(black, 0.2);
+        clip-path: polygon(0 0, 100% 0, 55% 100%, 0% 100%);
+    }
+}
+.competences-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-column-gap: clamp(30px, 10px + 5vw, 100px);
+    grid-row-gap: 100px;
+    padding-top: 120px;
+    padding-bottom: clamp(170px, 10vw, 200px);
+    @include mq(mobile) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 30px;
+    }
+    .title-lead {
         text-transform: uppercase;
         z-index: 1;
         > span {
@@ -71,25 +91,15 @@
             margin-top: 30px;
         }
     }
-    .yellow-block {
+    .competences-content {
         position: relative;
-        margin-left: 33vw;
-        background: var(--primary);
-        color: var(--secondary);
-        color: hsl(207deg 81% 11%);
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 15px;
-        padding-bottom: clamp(170px, 10vw, 200px);
-        padding-top: 50px;
-        padding-inline: 15vw 2vw;
-        clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0% 100%);
+        // gap: 15px;
 
-        &-content {
-            p {
-                opacity: 0;
-            }
+        p {
+            opacity: 0;
         }
 
         svg {
@@ -104,9 +114,6 @@
         // }
         .responsive-title {
             color: var(--secondary);
-        }
-        @include mq(tablet) {
-            margin-left: 5vw;
         }
     }
 }

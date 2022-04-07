@@ -82,6 +82,11 @@ h2 {
     font-family: var(--title-font);
     line-height: 1;
 }
+h3 {
+    color: var(--primary);
+    font-family: var(--title-font);
+    font-weight: 500;
+}
 
 a,
 a:focus,
@@ -105,6 +110,7 @@ svg {
     max-width: 100%;
 }
 p {
+    margin: 15px 0;
     a {
         font-weight: bold;
     }

@@ -24,6 +24,7 @@ export const getStaticProps = async () => {
 
 const IndexPage = ({ blocsDeTexte }) => {
     const homeCompetences = blocsDeTexte.find((bloc) => bloc.fields.slug === 'nos-competences-a-votre-service');
+    const pourquoiUnSite = blocsDeTexte.find((bloc) => bloc.fields.slug === 'pourquoi-un-site-web');
     return (
         <Wrapper
             url="https://graphandco.com"
@@ -35,7 +36,7 @@ const IndexPage = ({ blocsDeTexte }) => {
             background="linear-gradient(90deg, rgb(3 35 59), rgb(12, 16, 18))"
         >
             <Hero />
-            <Competences texts={homeCompetences} />
+            <Competences texts={homeCompetences} pourquoiUnSite={pourquoiUnSite} />
             <Atouts />
         </Wrapper>
     );
