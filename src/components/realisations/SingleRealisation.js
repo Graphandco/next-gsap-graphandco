@@ -22,7 +22,7 @@ const SingleRealisation = ({ realisation }) => {
                 <div className="realisation__wrapper container">
                     <div className="realisation__content">
                         <div className="realisation__description">
-                            <FadeInOut delay={1} x={-30}>
+                            <FadeInOut delay={1} x={30}>
                                 <Link href="/realisations">
                                     <a className="realisation__back">
                                         <FaLongArrowAltLeft />
@@ -31,13 +31,13 @@ const SingleRealisation = ({ realisation }) => {
                                 </Link>
                             </FadeInOut>
                             {siteLogo && (
-                                <FadeInOut delay={1.4} x={-30}>
+                                <FadeInOut delay={1.4} x={30}>
                                     <div className="realisation__logo">
                                         <Image src={'https:' + siteLogo.url} width={siteLogo.details.image.width} height={siteLogo.details.image.height} />
                                     </div>
                                 </FadeInOut>
                             )}
-                            <FadeInOut delay={1.8} x={-30}>
+                            <FadeInOut delay={1.8} x={30}>
                                 {documentToReactComponents(content)}
                             </FadeInOut>
                         </div>

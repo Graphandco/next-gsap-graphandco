@@ -22,8 +22,8 @@ export const getStaticProps = async () => {
     };
 };
 
-const IndexPage = (blocsDeTexte) => {
-    const homeCompetences = blocsDeTexte.blocsDeTexte.find((bloc) => bloc.fields.slug === 'nos-competences-a-votre-service');
+const IndexPage = ({ blocsDeTexte }) => {
+    const homeCompetences = blocsDeTexte.find((bloc) => bloc.fields.slug === 'nos-competences-a-votre-service');
     return (
         <Wrapper
             url="https://graphandco.com"

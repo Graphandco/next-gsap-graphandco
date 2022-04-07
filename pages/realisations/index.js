@@ -1,5 +1,5 @@
-import Wrapper from '../src/layout/Wrapper';
-import Realisations from '../src/components/realisations/Realisations';
+import Wrapper from '../../src/layout/Wrapper';
+import Realisations from '../../src/components/realisations/Realisations';
 
 import { createClient } from 'contentful';
 
@@ -21,7 +21,7 @@ export const getStaticProps = async () => {
     };
 };
 
-const RealisationsPage = (realisations) => {
+const RealisationsPage = ({ realisations }) => {
     return (
         <Wrapper
             url="https://tweenpages.vercel.app/three"
@@ -32,7 +32,7 @@ const RealisationsPage = (realisations) => {
             imageAlt="TweenPages Logo"
             background="linear-gradient(90deg,#052233,black)"
         >
-            <Realisations realisations={realisations.realisations} />
+            <Realisations realisations={realisations} />
         </Wrapper>
     );
 };

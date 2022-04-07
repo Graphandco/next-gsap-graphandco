@@ -30,28 +30,35 @@ export const getStaticProps = async ({ params }) => {
         'fields.slug': params.slug,
     });
 
+    if (!res?.items?.[0]) {
+        return { notFound: true };
+    }
+
     return {
         props: {
-            realisation: res.items[0],
+            realisation: res.items[0] || {},
         },
         revalidate: 1,
     };
 };
 
 const Realisation = ({ realisation }) => {
-    return (
-        <Wrapper
-            url="https://www.graphandco.com"
-            title={`${realisation.fields.title} | Graph and Co`}
-            description={`Présentation du site ${realisation.fields.title}`}
-            twitter="graphandco"
-            imageUrl="https://sites.graphandco.com/wp-content/uploads/2022/02/logo.png"
-            imageAlt="Graph and Co"
-            background="linear-gradient(90deg, hsl(205deg 44% 21%), rgb(12, 16, 18))"
-        >
-            <SingleRealisation realisation={realisation} />
-        </Wrapper>
-    );
+    if (realisation) {
+        return (
+            <Wrapper
+                url="https://www.graphandco.com"
+                title={`${realisation.fields.title ? realisation.fields.title : ''} | Graph and Co`}
+                description={`Présentation du site ${realisation.fields.title ? realisation.fields.title : ''}`}
+                twitter="graphandco"
+                imageUrl="https://sites.graphandco.com/wp-content/uploads/2022/02/logo.png"
+                imageAlt="Graph and Co"
+                background="linear-gradient(90deg, hsl(205deg 44% 21%), rgb(12, 16, 18))"
+            >
+                <SingleRealisation realisation={realisation} />
+            </Wrapper>
+        );
+    }
+    return <div className="not-foud">Not found !!</div>;
 };
 
 export default Realisation;
