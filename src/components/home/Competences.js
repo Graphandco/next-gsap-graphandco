@@ -4,6 +4,7 @@ import { gsap } from 'gsap/dist/gsap';
 import { useEffect, useRef } from 'react';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import LinkButton from '../LinkButton';
+import LottieComputer from '../../animation/lottie/LottieComputer';
 gsap.registerPlugin(ScrollTrigger);
 
 const Competences = ({ texts, pourquoiUnSite }) => {
@@ -57,6 +58,18 @@ const Competences = ({ texts, pourquoiUnSite }) => {
             },
         });
 
+        gsap.from(h3Ref.current, {
+            scale: 0.1,
+            opacity: 0,
+            duration: 1,
+            delay: 0.3,
+            ease: 'elastic.out',
+            scrollTrigger: {
+                trigger: h3Ref.current,
+                start: 'top bottom-=180',
+            },
+        });
+
         ScrollTrigger.batch('.competences-wrapper p', {
             once: true,
             interval: 0.1,
@@ -76,6 +89,7 @@ const Competences = ({ texts, pourquoiUnSite }) => {
     const titleSecondLineRef = useRef(null);
     const titleRef = useRef(null);
     const btnRef = useRef(null);
+    const h3Ref = useRef(null);
     const textRef = useRef(null);
 
     return (
@@ -98,8 +112,11 @@ const Competences = ({ texts, pourquoiUnSite }) => {
                     <div className="competences-content">{documentToReactComponents(content)}</div>
 
                     <div className="competences-subcontent">
-                        <h3>{pourquoiTitle}</h3>
+                        <h3 ref={h3Ref}>{pourquoiTitle}</h3>
                         {documentToReactComponents(pourquoiContent)}
+                    </div>
+                    <div className="competences-lottie">
+                        <LottieComputer />
                     </div>
                 </div>
             </section>

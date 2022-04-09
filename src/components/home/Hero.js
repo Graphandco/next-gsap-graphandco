@@ -1,9 +1,10 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import ImplodeExplodeInOut from '../../animation/ImplodeExplodeInOut';
 import FadeInOutUp from '../../animation/FadeInOutUp';
 import ScaleInOut from '../../animation/ScaleInOut';
 import LottieRocket from '../../animation/lottie/LottieRocket';
 import LinkButton from '../LinkButton';
+import gsap from 'gsap/dist/gsap';
 
 const Hero = () => {
     useEffect(() => {
@@ -14,10 +15,26 @@ const Hero = () => {
         };
     }, []);
 
+    useEffect(() => {
+        gsap.to(contentRef.current, {
+            y: 100,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: sectionRef.current,
+                start: 'bottom bottom-=10',
+                scrub: 2,
+            },
+        });
+    }, []);
+
+    const sectionRef = useRef(null);
+    const contentRef = useRef(null);
+    const rocketRef = useRef(null);
+
     return (
         <>
-            <section className="hero container">
-                <div className="hero-content">
+            <section className="hero container" ref={sectionRef}>
+                <div className="hero-content" ref={contentRef}>
                     <FadeInOutUp delay={1} y={-40}>
                         <div className="hero-subtitle">Un métier, une passion</div>
                     </FadeInOutUp>
@@ -36,7 +53,7 @@ const Hero = () => {
                     </ScaleInOut>
                 </div>
                 <FadeInOutUp delay={1.8} y={100}>
-                    <div className="hero-lottie">
+                    <div className="hero-lottie" ref={rocketRef}>
                         <LottieRocket />
                     </div>
                 </FadeInOutUp>

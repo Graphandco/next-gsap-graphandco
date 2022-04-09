@@ -2,6 +2,7 @@
 import { FaMobileAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 // import { TransitionContext } from '../context/TransitionContext';
 import Link from 'next/link';
+import Image from 'next/image';
 import FadeInOut from '../../animation/FadeInOut';
 
 const Footer = () => {
@@ -56,7 +57,10 @@ const Footer = () => {
                                 </Link>
                             </li>
                         </ul>
-                        <div className="footer__column__description">Graph and Co 2022</div>
+                        <div className="footer__column__links__description">
+                            <Image src="/img/logo.svg" alt="Site Logo" width={25} height={25} />
+                            Graph and Co 2022
+                        </div>
                     </div>
                 </div>
             </footer>

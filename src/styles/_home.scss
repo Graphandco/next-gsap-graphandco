@@ -4,6 +4,7 @@
     align-items: center;
     grid-template-columns: 1.5fr 1fr;
     gap: 50px;
+    transition: 0.1s;
 
     @include mq(mobile) {
         min-height: calc(100vh - 135px);
@@ -37,6 +38,7 @@
     }
     &-lottie {
         max-width: 350px;
+        transition: 0.1s;
     }
 }
 
@@ -55,6 +57,7 @@
         width: 350px;
         background-color: rgba(black, 0.2);
         clip-path: polygon(0 0, 100% 0, 55% 100%, 0% 100%);
+        pointer-events: none;
     }
 }
 .competences-wrapper {
@@ -68,6 +71,9 @@
     @include mq(mobile) {
         grid-template-columns: 1fr;
         grid-row-gap: 30px;
+    }
+    p {
+        opacity: 0;
     }
     .title-lead {
         text-transform: uppercase;
@@ -98,10 +104,6 @@
         justify-content: center;
         // gap: 15px;
 
-        p {
-            opacity: 0;
-        }
-
         svg {
             position: absolute;
             top: -40%;
@@ -109,12 +111,10 @@
             opacity: 0.2;
             z-index: -1;
         }
-        // @include mq(tablet) {
-        //     padding-block: clamp(50px, 6vw, 100px);
-        // }
-        .responsive-title {
-            color: var(--secondary);
-        }
+    }
+    .competences-lottie {
+        max-width: 400px;
+        margin: 0 auto;
     }
 }
 
@@ -125,6 +125,7 @@
     &-wrapper {
         margin-top: -8vw;
         position: relative;
+        padding-bottom: 75px;
         z-index: 0;
         display: grid;
         grid-template-columns: repeat(7, 1fr);

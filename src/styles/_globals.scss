@@ -51,7 +51,7 @@ main {
     margin: 0 auto;
     max-width: 1600px;
     width: 100%;
-    padding: 0 2.5vw;
+    padding: 0 clamp(15px, 2.5vw, 50px);
 }
 .header-section {
     padding: 50px 2vw;
@@ -85,7 +85,9 @@ h2 {
 h3 {
     color: var(--primary);
     font-family: var(--title-font);
+    font-size: clamp(19px, 10px + 2vw, 25px);
     font-weight: 500;
+    margin-top: 0;
 }
 
 a,
@@ -113,5 +115,25 @@ p {
     margin: 15px 0;
     a {
         font-weight: bold;
+    }
+}
+
+.page-404 {
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .title-404 {
+            font-size: clamp(50px, 30px + 5vw, 80px);
+            margin: 0 0 30px 0;
+        }
+        .oups {
+            font-size: clamp(80px, 10px + 10vw, 150px);
+            color: var(--primary);
+        }
+        .desc {
+            margin-bottom: 20px;
+        }
     }
 }
