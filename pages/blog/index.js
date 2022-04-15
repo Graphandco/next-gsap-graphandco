@@ -1,5 +1,5 @@
 import Wrapper from '../../src/layout/Wrapper';
-import Realisations from '../../src/components/realisations/Realisations';
+import BlogList from '../../src/components/blog/BlogList';
 
 import { createClient } from 'contentful';
 
@@ -10,32 +10,31 @@ export const getStaticProps = async () => {
     });
 
     const res = await client.getEntries({
-        content_type: 'realisations',
+        content_type: 'blog',
     });
 
     return {
         props: {
-            realisations: res.items,
+            blogArticles: res.items,
         },
         revalidate: 1,
     };
 };
 
-const RealisationsPage = ({ realisations }) => {
+const BlogPage = ({ blogArticles }) => {
     return (
         <Wrapper
             url="https://graphandco.com"
-            title="Réalisations | Graph and Co"
-            description="Les sites réalisés par Graph and Co"
+            title="Graph and Co"
+            description="Le blog de Graph and Co"
             twitter="graphandco"
             imageUrl="https://graphandco.com/graphandco-banner.png"
             imageAlt="Logo Graph and Co"
-            background="linear-gradient(90deg, rgb(7 48 93), black)"
-            // background="linear-gradient(90deg,#052233,black)"
+            background="linear-gradient(90deg, rgb(93 91 87), black)"
         >
-            <Realisations realisations={realisations} />
+            <BlogList blogArticles={blogArticles} />
         </Wrapper>
     );
 };
 
-export default RealisationsPage;
+export default BlogPage;

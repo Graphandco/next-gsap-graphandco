@@ -3,13 +3,14 @@ import Prestations from '../src/components/prestations/Prestations';
 
 const PrestationsPage = () => (
     <Wrapper
-        url="https://tweenpages.vercel.app/two"
+        url="https://graphandco.com"
         title="Prestations | Graph and Co"
-        description="Demo of TweenPages with a complex transition to page number two"
+        description="Les prestations proposées par graph and Co"
         twitter="graphandco"
-        imageUrl="https://tweenpages.vercel.app/project-logo.png"
-        imageAlt="TweenPages Logo"
-        background="linear-gradient(90deg, hsl(205deg 44% 21%), rgb(12, 16, 18))"
+        imageUrl="https://graphandco.com/graphandco-banner.png"
+        imageAlt="Logo Graph and Co"
+        // background="linear-gradient(90deg, hsl(205deg 44% 21%), rgb(12, 16, 18))"
+        background="linear-gradient(90deg, rgb(30 42 77), rgb(12, 16, 18))"
     >
         <Prestations />
     </Wrapper>

@@ -3,12 +3,12 @@ import Wrapper from '../src/layout/Wrapper';
 
 const Page404 = () => (
     <Wrapper
-        url="https://tweenpages.vercel.app/two"
-        title="Contact | Graph and Co"
-        description="404"
-        twitter="johnpolacek"
-        imageUrl="https://tweenpages.vercel.app/project-logo.png"
-        imageAlt="TweenPages Logo"
+        url="https://graphandco.com"
+        title="Erreur 404 | Graph and Co"
+        description="Page d'erreur 404"
+        twitter="graphandco"
+        imageUrl="https://graphandco.com/graphandco-banner.png"
+        imageAlt="Logo Graph and Co"
         background="linear-gradient(90deg, hsl(205deg 44% 21%), rgb(30, 16, 18))"
     >
         <Custom404 />

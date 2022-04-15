@@ -1,6 +1,6 @@
 import NavLink from './NavLink';
 import { useWindowSize } from '../../hooks/useWindowSize';
-import { FaHome, FaBoxOpen, FaImages, FaEnvelope } from 'react-icons/fa';
+import { FaHome, FaBoxOpen, FaImages, FaEnvelope, FaPenNib } from 'react-icons/fa';
 
 const Nav = () => {
     const responsive = useWindowSize();
@@ -15,7 +15,10 @@ const Nav = () => {
             <NavLink href="/realisations" delay={2.2}>
                 {responsive === 'mobile' ? <FaImages /> : 'Réalisations'}
             </NavLink>
-            <NavLink href="/contact" delay={2.3}>
+            {/* <NavLink href="/blog" delay={2.3}>
+                {responsive === 'mobile' ? <FaPenNib /> : 'Blog'}
+            </NavLink> */}
+            <NavLink href="/contact" delay={2.4}>
                 {responsive === 'mobile' ? <FaEnvelope /> : 'Contact'}
             </NavLink>
         </nav>

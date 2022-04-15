@@ -3,13 +3,13 @@ import Contact from '../src/components/contact/Contact';
 
 const ContactPage = () => (
     <Wrapper
-        url="https://tweenpages.vercel.app/two"
+        url="https://graphandco.com"
         title="Contact | Graph and Co"
-        description="Demo of TweenPages with a complex transition to page number two"
-        twitter="johnpolacek"
-        imageUrl="https://tweenpages.vercel.app/project-logo.png"
-        imageAlt="TweenPages Logo"
-        background="linear-gradient(90deg, hsl(205deg 44% 21%), rgb(12, 16, 18))"
+        description="Page pour prendre contact avec Graph and co"
+        twitter="graphandco"
+        imageUrl="https://graphandco.com/graphandco-banner.png"
+        imageAlt="Logo Graph and Co"
+        background="linear-gradient(90deg, rgb(52 37 37), rgb(12, 16, 18))"
     >
         <Contact />
     </Wrapper>

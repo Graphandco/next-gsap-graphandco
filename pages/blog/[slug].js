@@ -1,6 +1,6 @@
 import { createClient } from 'contentful';
 import Wrapper from '../../src/layout/Wrapper';
-import SingleRealisation from '../../src/components/realisations/SingleRealisation';
+import BlogArticle from '../../src/components/blog/BlogArticle';
 
 const client = createClient({
     space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -9,7 +9,7 @@ const client = createClient({
 
 export const getStaticPaths = async () => {
     const res = await client.getEntries({
-        content_type: 'realisations',
+        content_type: 'blog',
     });
 
     const paths = res.items.map((item) => {
@@ -26,7 +26,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
     const res = await client.getEntries({
-        content_type: 'realisations',
+        content_type: 'blog',
         'fields.slug': params.slug,
     });
 
@@ -36,29 +36,30 @@ export const getStaticProps = async ({ params }) => {
 
     return {
         props: {
-            realisation: res.items[0] || {},
+            blog: res.items[0] || {},
         },
         revalidate: 1,
     };
 };
 
-const Realisation = ({ realisation }) => {
-    if (realisation) {
+const Blog = ({ blog }) => {
+    console.log(blog);
+    if (blog) {
         return (
             <Wrapper
                 url="https://www.graphandco.com"
-                title={`${realisation.fields.title ? realisation.fields.title : ''} | Graph and Co`}
-                description={`Présentation du site ${realisation.fields.title ? realisation.fields.title : ''}`}
+                title={`${blog.fields.title ? blog.fields.title : ''} | Graph and Co`}
+                description={`${blog.fields.title ? blog.fields.title : ''} | Graph and Co`}
                 twitter="graphandco"
                 imageUrl="https://graphandco.com/graphandco-banner.png"
                 imageAlt="Graph and Co"
-                background="linear-gradient(90deg, rgb(10 39 70), black)"
+                background="linear-gradient(90deg, hsl(205deg 44% 21%), rgb(12, 16, 18))"
             >
-                <SingleRealisation realisation={realisation} />
+                <BlogArticle article={blog} />
             </Wrapper>
         );
     }
-    return <div className="not-foud">Not found !!</div>;
+    return <div className="not-found">Not found !!</div>;
 };
 
-export default Realisation;
+export default Blog;
