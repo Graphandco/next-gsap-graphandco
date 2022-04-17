@@ -25,6 +25,7 @@
     "gsap": "npm:@gsap/business@^3.7.1",
     "lottie-react": "^2.2.1",
     "next": "^12.0.8",
+    "next-pwa": "^5.5.2",
     "prism-react-renderer": "^1.2.1",
     "prismjs": "^1.27.0",
     "prop-types": "^15.8.1",

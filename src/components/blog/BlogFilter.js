@@ -8,7 +8,7 @@ const BlogFilter = ({ blogArticles, setFiltered, activeCat, setActiveCat }) => {
         }
         const filtered = blogArticles.filter((article) => article.fields.category.includes(activeCat));
         setFiltered(filtered);
-        console.log(activeCat);
+        // console.log(activeCat);
     }, [activeCat]);
 
     const filteredCategories = [...new Set(blogArticles.map((cat) => cat.fields.category))];
