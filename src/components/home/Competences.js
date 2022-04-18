@@ -15,7 +15,13 @@ const Competences = ({ texts, pourquoiUnSite }) => {
     const titleFirstLine = title.split(' ').slice(0, 2).join(' ');
     const titleSecondLine = title.split(' ').slice(2, 5).join(' ');
 
-    // const responsive = useWindowSize();
+    const titleFirstLineRef = useRef(null);
+    const titleSecondLineRef = useRef(null);
+    const titleRef = useRef(null);
+    const btnRef = useRef(null);
+    const h3Ref = useRef(null);
+    const textRef = useRef(null);
+    const imgRef = useRef(null);
 
     useEffect(() => {
         gsap.from(titleFirstLineRef.current, {
@@ -70,6 +76,18 @@ const Competences = ({ texts, pourquoiUnSite }) => {
             },
         });
 
+        gsap.from(imgRef.current, {
+            opacity: 0,
+            x: 50,
+            duration: 1,
+            delay: 0.3,
+            ease: 'elastic.out',
+            scrollTrigger: {
+                trigger: imgRef.current,
+                start: 'top bottom-=230',
+            },
+        });
+
         ScrollTrigger.batch('.competences-wrapper p', {
             once: true,
             interval: 0.1,
@@ -84,13 +102,6 @@ const Competences = ({ texts, pourquoiUnSite }) => {
             start: 'top bottom-=150',
         });
     }, []);
-
-    const titleFirstLineRef = useRef(null);
-    const titleSecondLineRef = useRef(null);
-    const titleRef = useRef(null);
-    const btnRef = useRef(null);
-    const h3Ref = useRef(null);
-    const textRef = useRef(null);
 
     return (
         <>
@@ -115,7 +126,7 @@ const Competences = ({ texts, pourquoiUnSite }) => {
                         <h3 ref={h3Ref}>{pourquoiTitle}</h3>
                         {documentToReactComponents(pourquoiContent)}
                     </div>
-                    <div className="competences-lottie">
+                    <div className="competences-lottie" ref={imgRef}>
                         <LottieComputer />
                     </div>
                 </div>

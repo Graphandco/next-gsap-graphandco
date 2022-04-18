@@ -9,7 +9,7 @@ const ContactPage = () => (
         twitter="graphandco"
         imageUrl="https://graphandco.com/graphandco-banner.png"
         imageAlt="Logo Graph and Co"
-        background="linear-gradient(90deg, rgb(52 37 37), rgb(12, 16, 18))"
+        background="linear-gradient(90deg, rgb(37 52 45), rgb(12, 16, 18))"
     >
         <Contact />
     </Wrapper>

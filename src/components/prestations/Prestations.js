@@ -62,9 +62,10 @@ const Prestations = () => {
                         <Image width={300} height={190} src="/img/prestations-lead.svg" />
                     </FadeInOut>
                     <FadeInOut y={-20} delay={1.8} className="prestations__lead__content">
-                        Nous mettons à votre disposition le site qui vous correspond le mieux. Nous adaptons nos prestations en fonction de vos besoins.
-                        Choisissez votre pack, tout est personnalisable afin de convenir à vos attentes, qu'il s'agisse d'un site vitrine classique ou d'un site
-                        avec des fonctionnalités plus poussées, nous avons forcément le site taillé pour vous !
+                        Nous mettons à votre disposition le site qui vous correspond le mieux. Nous adaptons nos prestations{' '}
+                        <strong>en fonction de vos besoins</strong>. Choisissez votre pack, tout est personnalisable afin de convenir à vos attentes, qu'il
+                        s'agisse d'un site vitrine classique ou d'un site avec des fonctionnalités plus poussées, nous avons forcément le site taillé pour vous
+                        !
                     </FadeInOut>
                 </div>
                 <div className="prestations__hero container">

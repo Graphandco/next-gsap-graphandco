@@ -1,26 +1,26 @@
-.contact-form {
-    p {
-        width: 50%;
-        @include mq(mobile) {
-            width: 100%;
-        }
-    }
-}
-.contact-form__wrapper {
+.contact-top {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    padding: 20px 0 100px 0;
+    grid-template-columns: 3fr 2fr;
+    gap: 50px;
+    align-items: center;
     @include mq(mobile) {
-        display: flex;
-        flex-direction: column-reverse;
+        grid-template-columns: 1fr;
     }
-
-    .contact-form__image {
+    .contact-image {
         display: flex;
         margin: auto;
         max-width: 400px;
         justify-self: center;
+    }
+}
+.contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding-block: 20px 100px;
+    @include mq(mobile) {
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     form {

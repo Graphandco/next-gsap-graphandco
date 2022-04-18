@@ -88,14 +88,25 @@ const ContactForm = () => {
         }
     };
     return !emailSent ? (
-        <section className="contact-form container">
-            <p>
-                Vous avez un projet web ? Nous sommes là pour vous conseiller et vous guider en fonction de vos besoins et de votre budget. Chaque projet est
-                différent et demande réflexion et échanges autour d'un café afin de cibler les besoins. <br></br>N'hésitez pas à nous contacter pour toute
-                demande d'information ! Nous nous ferons un plaisir de revenir vers vous rapidement.
-            </p>
+        <>
+            <div className="contact-top container">
+                <div className="contact-description">
+                    <h2>Une envie, un projet ?</h2>
+                    <p>
+                        Vous souhaitez avoir un site web créé à votre image, qui vous ressemble et qui corresponde à vos valeurs ? Nous sommes là pour vous
+                        conseiller et vous guider en fonction de vos besoins et de votre budget. Chaque projet est différent et ne peut grandir qu'en avançant
+                        ensemble. Nous serons ravis de définir ensemble LE site taillé pour vous. <br></br>
+                    </p>
+                    <p>N'hésitez pas à nous contacter pour toute demande d'information ! Nous nous ferons un plaisir de revenir vers vous rapidement.</p>
+                </div>
+                <div className="contact-image">
+                    <FadeInOut x={20} delay={1.5}>
+                        <Image className="op5" width={400} height={250} src="/img/contact.svg" />
+                    </FadeInOut>
+                </div>
+            </div>
 
-            <div className="contact-form__wrapper">
+            <div className="contact-form container">
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="name">Votre nom:</label>
@@ -120,13 +131,8 @@ const ContactForm = () => {
                     {error && <div className="form-error">{error}</div>}
                     <LinkButton name="Envoyer" />
                 </form>
-                <div className="contact-form__image">
-                    <FadeInOut x={20} delay={1.5}>
-                        <Image className="op5" width={400} height={250} src="/img/contact.svg" />
-                    </FadeInOut>
-                </div>
             </div>
-        </section>
+        </>
     ) : (
         <section className="emailsent">
             <LottieMail />
