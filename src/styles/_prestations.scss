@@ -20,9 +20,12 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;
+
+        background: var(--primary);
+        color: var(--secondary);
+
         svg {
             font-size: 50px;
-            color: white;
         }
 
         &__row {

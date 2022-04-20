@@ -68,24 +68,26 @@ const Prestations = () => {
                         !
                     </FadeInOut>
                 </div>
-                <div className="prestations__hero container">
-                    <div className="prestations__hero__row">
-                        <FadeInOut x={-20} delay={2}>
-                            <GiMuscleUp />
-                        </FadeInOut>
-                        <FadeInOut y={5} delay={2.25}>
-                            Vous êtes novice en informatique ? Aucun problème, nous vous montrons à quel point éditer votre site est un vrai jeu d'enfant !
-                        </FadeInOut>
+                <FadeInOut delay={2}>
+                    <div className="prestations__hero container">
+                        <div className="prestations__hero__row">
+                            <FadeInOut x={-20} delay={2.15}>
+                                <GiMuscleUp />
+                            </FadeInOut>
+                            <FadeInOut y={5} delay={2.25}>
+                                Vous êtes novice en informatique ? Aucun problème, nous vous montrons à quel point éditer votre site est un vrai jeu d'enfant !
+                            </FadeInOut>
+                        </div>
+                        <div className="prestations__hero__row">
+                            <FadeInOut x={-20} delay={2.5}>
+                                <IoIosRocket />
+                            </FadeInOut>
+                            <FadeInOut y={5} delay={2.75}>
+                                Vous êtes un utilisateur aguerri ? Vous serez ravi du niveau de personnalisation que le site vous propose.
+                            </FadeInOut>
+                        </div>
                     </div>
-                    <div className="prestations__hero__row">
-                        <FadeInOut x={-20} delay={2.5}>
-                            <IoIosRocket />
-                        </FadeInOut>
-                        <FadeInOut y={5} delay={2.75}>
-                            Vous êtes un utilisateur aguerri ? Vous serez ravi du niveau de personnalisation que le site vous propose.
-                        </FadeInOut>
-                    </div>
-                </div>
+                </FadeInOut>
                 <div className="prestations__content">
                     {packs.map((pack) => (
                         <PrestationsPack key={pack.id} title={pack.title} details={pack.details} />
