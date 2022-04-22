@@ -30,7 +30,7 @@ const RealisationsPage = ({ realisations }) => {
             twitter="graphandco"
             imageUrl="https://graphandco.com/graphandco-banner.png"
             imageAlt="Logo Graph and Co"
-            background="linear-gradient(90deg, rgb(7 48 93), black)"
+            background="linear-gradient(90deg, rgb(32 68 98), black)"
             // background="linear-gradient(90deg,#052233,black)"
         >
             <Realisations realisations={realisations} />
