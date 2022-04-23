@@ -98,6 +98,16 @@
 /*--------------------
   GRID
 ----------------------*/
+.realisations {
+    h1 {
+        margin-bottom: 0;
+    }
+    p {
+        max-width: 800px;
+        margin-inline: 0;
+        margin-bottom: 30px;
+    }
+}
 .realisations-grid {
     .grid-item {
         min-height: 200px;
@@ -108,6 +118,7 @@
             display: flex;
             align-items: flex-end;
             justify-content: flex-end;
+            padding: 10px;
             &:before {
                 content: '';
                 position: absolute;
@@ -136,7 +147,6 @@
         &-name {
             position: relative;
             z-index: 1;
-            padding: 0.5vw 2vw;
             font-size: 22px;
             // font-weight: 600;
             color: white !important;
@@ -147,6 +157,16 @@
                 width: 5px;
                 height: 5px;
                 border-radius: 50%;
+                background-color: var(--primary);
+                z-index: -1;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 2px;
                 background-color: var(--primary);
                 z-index: -1;
             }
@@ -188,6 +208,7 @@
         'loide loide exotique toscana'
         'burgerio boatman willow willow'
         'troisfp troisfp troisfp fylo';
+    gap: 15px;
     @include mq(tablet) {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(5, 1fr);
