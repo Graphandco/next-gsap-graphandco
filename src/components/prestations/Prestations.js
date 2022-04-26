@@ -88,7 +88,12 @@ const Prestations = () => {
                         </div>
                     </div>
                 </FadeInOut>
-                <div className="prestations__content">
+                <h2>
+                    <FadeInOut y={-20} delay={1.8} className="prestations__lead__image">
+                        Découvrez les packs à votre disposition
+                    </FadeInOut>
+                </h2>
+                <div className="prestations__content container">
                     {packs.map((pack) => (
                         <PrestationsPack key={pack.id} title={pack.title} details={pack.details} />
                     ))}

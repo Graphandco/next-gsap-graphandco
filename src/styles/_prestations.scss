@@ -20,9 +20,12 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;
-
         background: var(--primary);
         color: var(--secondary);
+        margin-bottom: 50px;
+        @include mq(mobile) {
+            background-color: unset;
+        }
 
         svg {
             font-size: 50px;
@@ -32,9 +35,11 @@
             display: flex;
             align-items: center;
             gap: 20px;
-            background: rgba(242, 173, 13, 0.05);
             padding: 1vw;
             border-radius: 10px;
+            @include mq(mobile) {
+                background-color: var(--primary);
+            }
             & > * {
                 display: flex;
             }
@@ -45,12 +50,17 @@
         }
     }
 
+    h2 {
+        padding: 0 clamp(15px, 2.5vw, 50px);
+        max-width: 1600px;
+        margin: auto;
+    }
+
     &__content {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 10px;
-        margin: 110px 0;
-        padding-inline: 2vw;
+        margin-block: 50px;
         @include mq(tablet) {
             grid-template-columns: repeat(2, 1fr);
         }

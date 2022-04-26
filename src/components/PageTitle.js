@@ -37,11 +37,16 @@ const Pagetitle = ({ title, bodyID }) => {
 };
 
 const Title = styled.h1`
+    margin: 0 auto;
+    max-width: 1600px;
     position: relative;
-    padding: 50px 2vw;
+    padding: 50px clamp(15px, 2.5vw, 50px);
     font-size: clamp(38px, 28px + 2vw, 50px);
     color: white;
     font-family: var(--title-font);
+    @media (max-width: 767px) {
+        padding: 25px 2vw;
+    }
 `;
 
 const TitleLine = styled.span`
