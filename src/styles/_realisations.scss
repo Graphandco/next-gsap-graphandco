@@ -98,11 +98,45 @@
 /*--------------------
   GRID
 ----------------------*/
-.realisations {
-    p {
-        max-width: 800px;
-        margin-inline: 0;
-        margin-bottom: 30px;
+.realisations-description {
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+
+    @include mq(tablet) {
+        gap: 20px;
+    }
+
+    @include mq(mobile) {
+        grid-template-columns: 1fr;
+    }
+
+    // &:before {
+    //     content: '';
+    //     position: absolute;
+    //     inset: 0;
+    //     background-color: white;
+    //     opacity: 0.05;
+    //     clip-path: polygon(70% 0, 100% 0, 100% 100%, 55% 100%);
+    // }
+
+    .realisations-description-cta {
+        display: grid;
+        place-items: center;
+        gap: 15px;
+        svg {
+            color: white;
+            font-size: 2rem;
+        }
+        & > span {
+            font-family: var(--title-font);
+            text-transform: uppercase;
+            color: white;
+            font-weight: bold;
+        }
     }
 }
 .realisations-grid {

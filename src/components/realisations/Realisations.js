@@ -2,6 +2,8 @@ import FadeInOut from '../../animation/FadeInOut';
 import { useWindowSize } from '../../hooks/useWindowSize';
 import PageTitle from '../PageTitle';
 import GridItem from './GridItem';
+import LinkButton from '../LinkButton';
+import { FaPeopleArrows } from 'react-icons/fa';
 
 const Realisations = ({ realisations }) => {
     const responsive = useWindowSize();
@@ -22,7 +24,7 @@ const Realisations = ({ realisations }) => {
             <section className="realisations">
                 <PageTitle title="Nos réalisations" bodyID="realisations" />
                 <FadeInOut delay="1">
-                    <div className="container">
+                    <div className="realisations-description container">
                         <p>
                             Nous vous présentons les projets réalisés pour les clients qui nous ont fait confiance pour le développement de leur site internet.
                             Qu'il s'agisse d'une refonte ou d'une première présence web, nous avons à coeur de leur livrer{' '}
@@ -30,6 +32,11 @@ const Realisations = ({ realisations }) => {
                             collaboration avec des référenceurs, graphistes et photographes pour donner vie à un projet dans sa globalité. N'hésitez pas à
                             consulter également les prototypes - ou "mockups"- de sites, qui sont des inspirations sur différents thèmes.
                         </p>
+                        <div className="realisations-description-cta">
+                            <FaPeopleArrows />
+                            <span>Envie d’échanger sur votre projet ?</span>
+                            <LinkButton name="Contactez-nous !" link="/contact" />
+                        </div>
                     </div>
                 </FadeInOut>
                 <div className="realisations-grid">

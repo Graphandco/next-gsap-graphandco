@@ -44,7 +44,10 @@ const Hero = () => {
                         </h1>
                     </ImplodeExplodeInOut>
                     <FadeInOutUp delay={2}>
-                        <div className="hero-description">&#8618; Nous sommes spécialisés dans la réalisation de sites web modernes et intuitifs.</div>
+                        <div className="hero-description">
+                            &#8618; Nous sommes spécialisés dans la réalisation de sites web. Moderne et intuitif, votre site sera un puissant levier pour
+                            accroitre la vitalité de votre entreprise.
+                        </div>
                     </FadeInOutUp>
                     <ScaleInOut as="div" delay={3} yellow>
                         <div className="hero-cta">

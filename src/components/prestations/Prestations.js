@@ -62,10 +62,10 @@ const Prestations = () => {
                         <Image width={300} height={190} src="/img/prestations-lead.svg" />
                     </FadeInOut>
                     <FadeInOut y={-20} delay={1.8} className="prestations__lead__content">
-                        Nous mettons à votre disposition le site qui vous correspond le mieux. Nous adaptons nos prestations{' '}
-                        <strong>en fonction de vos besoins</strong>. Choisissez votre pack, tout est personnalisable afin de convenir à vos attentes, qu'il
-                        s'agisse d'un site vitrine classique ou d'un site avec des fonctionnalités plus poussées, nous avons forcément le site taillé pour vous
-                        !
+                        Selon votre profil et votre budget, plusieurs options s’offrent à vous. Quel que soit le pack choisi,{' '}
+                        <strong>votre site sera personnalisé</strong> pour épouser vos besoins et ceux de vos clients. Qu'il s'agisse d'un site vitrine ou d'un
+                        site de vente en ligne, il sera doté de toutes les fonctionnalités dont vous et vos clients avez besoin. Dans le futur, il sera
+                        envisageable d’en développer de nouvelles pour l’adapter aux évolutions de votre activité.
                     </FadeInOut>
                 </div>
                 <FadeInOut delay={2}>
@@ -90,7 +90,7 @@ const Prestations = () => {
                 </FadeInOut>
                 <h2>
                     <FadeInOut y={-20} delay={1.8} className="prestations__lead__image">
-                        Découvrez les packs à votre disposition
+                        Trouvez le pack qui vous correspond
                     </FadeInOut>
                 </h2>
                 <div className="prestations__content container">
