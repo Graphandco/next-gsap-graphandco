@@ -1,6 +1,7 @@
 .footer {
     background: rgba(black, 0.1);
     padding-block: 30px;
+    border-top: 1px solid rgb(255 255 255 / 6%);
     @include mq(mobile) {
         padding-bottom: 80px;
     }

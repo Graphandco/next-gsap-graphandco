@@ -3,7 +3,7 @@ import { useWindowSize } from '../../hooks/useWindowSize';
 import PageTitle from '../PageTitle';
 import GridItem from './GridItem';
 import LinkButton from '../LinkButton';
-import { FaPeopleArrows } from 'react-icons/fa';
+// import { FaPeopleArrows } from 'react-icons/fa';
 
 const Realisations = ({ realisations }) => {
     const responsive = useWindowSize();
@@ -33,7 +33,7 @@ const Realisations = ({ realisations }) => {
                             consulter également les prototypes - ou "mockups"- de sites, qui sont des inspirations sur différents thèmes.
                         </p>
                         <div className="realisations-description-cta">
-                            <FaPeopleArrows />
+                            {/* <FaPeopleArrows /> */}
                             <span>Envie d’échanger sur votre projet ?</span>
                             <LinkButton name="Contactez-nous !" link="/contact" />
                         </div>

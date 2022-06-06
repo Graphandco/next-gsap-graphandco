@@ -3,6 +3,7 @@ import Atouts from '../src/components/home/Atouts';
 import Competences from '../src/components/home/Competences';
 import Hero from '../src/components/home/Hero';
 import { createClient } from 'contentful';
+import Rassurance from '../src/components/home/Rassurance';
 
 export const getStaticProps = async () => {
     const client = createClient({
@@ -38,6 +39,7 @@ const IndexPage = ({ blocsDeTexte }) => {
             <Hero />
             <Competences texts={homeCompetences} pourquoiUnSite={pourquoiUnSite} />
             <Atouts />
+            <Rassurance />
         </Wrapper>
     );
 };
