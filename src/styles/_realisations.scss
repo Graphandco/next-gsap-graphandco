@@ -215,8 +215,8 @@
     .willow-tarot {
         grid-area: willow;
     }
-    .la-toscana {
-        grid-area: toscana;
+    .hola-mate {
+        grid-area: holamate;
     }
     .trois-frontieres-peche {
         grid-area: troisfp;
@@ -235,8 +235,8 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas:
-        'loide loide barber toscana'
-        'loide loide exotique toscana'
+        'loide loide barber holamate'
+        'loide loide exotique holamate'
         'burgerio boatman willow willow'
         'troisfp troisfp troisfp fylo';
     gap: 15px;
@@ -245,7 +245,7 @@
         grid-template-rows: repeat(5, 1fr);
         grid-template-areas:
             'loide loide barber'
-            'loide loide toscana'
+            'loide loide holamate'
             'exotique willow willow'
             'boatman boatman burgerio'
             'fylo troisfp troisfp';
@@ -255,8 +255,8 @@
         grid-template-rows: repeat(6, 1fr);
         grid-template-areas:
             'loide barber'
-            'loide toscana'
-            'exotique toscana'
+            'loide holamate'
+            'exotique holamate'
             'willow burgerio'
             'boatman troisfp'
             'fylo troisfp';
