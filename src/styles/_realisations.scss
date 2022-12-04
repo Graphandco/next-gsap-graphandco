@@ -230,35 +230,39 @@
     .barber-shop {
         grid-area: barber;
     }
+    .bomot {
+        grid-area: bomot;
+    }
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas:
-        'loide loide barber holamate'
+        'loide loide bomot holamate'
         'loide loide exotique holamate'
         'burgerio boatman willow willow'
-        'troisfp troisfp troisfp fylo';
+        'troisfp troisfp fylo barber';
     gap: 15px;
     @include mq(tablet) {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(5, 1fr);
         grid-template-areas:
-            'loide loide barber'
+            'loide loide bomot'
             'loide loide holamate'
             'exotique willow willow'
             'boatman boatman burgerio'
-            'fylo troisfp troisfp';
+            'barber fylo troisfp';
     }
     @include mq(mobile) {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(6, 1fr);
         grid-template-areas:
-            'loide barber'
+            'loide bomot'
             'loide holamate'
             'exotique holamate'
             'willow burgerio'
             'boatman troisfp'
-            'fylo troisfp';
+            'barber troisfp'
+            'fylo fylo';
     }
 }
