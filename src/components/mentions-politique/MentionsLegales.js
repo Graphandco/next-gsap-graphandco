@@ -26,7 +26,17 @@ const MentionsLegales = () => {
                                 </a>
                             </p>
                             <p>SIRET : 803049154 00021</p>
-                            Réalisation logo : Sébastien Frey
+                            <br />
+                            <p>
+                                <strong>Création logotype :</strong>
+                            </p>
+                            <p>SF-Elements Studio ©</p>
+                            <p>
+                                <a href="mailto:contact@sf-elements.com">contact@sf-elements.com</a>
+                            </p>
+                            <p>
+                                <a href="tel:07 79 72 87 51">07 79 72 87 51</a>
+                            </p>
                         </div>
                     </FadeInOut>
                     <FadeInOut x={20} delay={2}>
