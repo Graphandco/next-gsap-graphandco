@@ -78,8 +78,14 @@
             grid-template-columns: 1fr;
         }
     }
-    &__featured img {
-        border-radius: 10px;
+    &__featured {
+        background-image: url(/img/laptop.png);
+        background-size: contain;
+        padding: 5% 11% 13% 11%;
+        background-repeat: no-repeat;
+        img {
+            border-radius: 10px;
+        }
     }
     &__description {
         margin-bottom: 30px;
@@ -89,10 +95,18 @@
         align-items: center;
         gap: 5px;
         margin: -10px 0 10px 0;
+        opacity: 0.5;
     }
     &__logo {
-        max-height: 120px;
-        max-width: 120px;
+        // max-height: 120px;
+        max-width: 125px;
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        background: var(--secondary);
+        padding: 8px;
+        border-radius: 10px;
+        border: 2px solid white;
     }
 }
 /*--------------------

@@ -30,13 +30,7 @@ const SingleRealisation = ({ realisation }) => {
                                     </a>
                                 </Link>
                             </FadeInOut>
-                            {siteLogo && (
-                                <FadeInOut delay={1.4} x={30}>
-                                    <div className="realisation__logo">
-                                        <Image src={'https:' + siteLogo.url} width={siteLogo.details.image.width} height={siteLogo.details.image.height} />
-                                    </div>
-                                </FadeInOut>
-                            )}
+
                             <FadeInOut delay={1.8} x={30}>
                                 {documentToReactComponents(content)}
                             </FadeInOut>
@@ -46,9 +40,18 @@ const SingleRealisation = ({ realisation }) => {
                             <LinkButton name="Voir le site" link={link} newTab />
                         </ScaleInOut>
                     </div>
-                    <div className="realisation__featured">
+                    <div className="realisation__laptop">
                         <FadeInOut delay={2} x={30}>
-                            <Image src={'https:' + image.url} width={image.details.image.width} height={image.details.image.height} quality={100} />
+                            <div className="realisation__featured">
+                                <Image src={'https:' + image.url} width={image.details.image.width} height={image.details.image.height} quality={100} />
+                                {siteLogo && (
+                                    <div className="realisation__logo">
+                                        <FadeInOut delay={1.4} x={30}>
+                                            <Image src={'https:' + siteLogo.url} width={siteLogo.details.image.width} height={siteLogo.details.image.height} />
+                                        </FadeInOut>
+                                    </div>
+                                )}
+                            </div>
                         </FadeInOut>
                     </div>
                 </div>
