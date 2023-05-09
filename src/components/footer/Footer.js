@@ -59,7 +59,7 @@ const Footer = () => {
                         </ul>
                         <div className="footer__column__links__description">
                             <Image src="/img/logo.svg" alt="Site Logo" width={25} height={25} />
-                            Graph and Co 2022
+                            Graph and Co 2023
                         </div>
                     </div>
                 </div>
