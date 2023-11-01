@@ -30,7 +30,7 @@ export default function MyApp({ Component, pageProps }) {
         <TransitionProvider>
             <TransitionLayout>
                 <div className="site-wrapper">
-                    <AnimatePresence mode="wait">{isLoading && <Preloader />}</AnimatePresence>
+                    {/* <AnimatePresence mode="wait">{isLoading && <Preloader />}</AnimatePresence> */}
                     <Header />
                     <Component {...pageProps} />
                     <Footer />
