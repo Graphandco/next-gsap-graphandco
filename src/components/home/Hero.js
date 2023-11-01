@@ -5,6 +5,8 @@ import ScaleInOut from '../../animation/ScaleInOut';
 import LottieRocket from '../../animation/lottie/LottieRocket';
 import LinkButton from '../LinkButton';
 import gsap from 'gsap/dist/gsap';
+import Button from '../Button';
+import Link from 'next/link';
 
 const Hero = () => {
     useEffect(() => {
@@ -49,11 +51,16 @@ const Hero = () => {
                             accroitre la vitalité de votre entreprise.
                         </div>
                     </FadeInOutUp>
-                    <ScaleInOut as="div" delay={3} yellow>
+                    {/* <ScaleInOut as="div" delay={3} yellow>
                         <div className="hero-cta">
                             <LinkButton name="Voir nos prestations" link="/prestations" />
                         </div>
-                    </ScaleInOut>
+                    </ScaleInOut> */}
+                    <div className="hero-cta">
+                        <Button>
+                            <Link href="/prestations">Voir nos prestations</Link>
+                        </Button>
+                    </div>
                 </div>
                 <FadeInOutUp delay={1.8} y={100}>
                     <div className="hero-lottie" ref={rocketRef}>

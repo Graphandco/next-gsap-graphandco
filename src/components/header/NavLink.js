@@ -29,7 +29,7 @@ const NavLink = ({ children, href, delay }) => {
     );
 };
 
-const CustomLink = styled.a`
+const CustomLink = styled.span`
     display: inline-block;
     padding: 0 16px;
     /* margin-top: 4px; */

@@ -20,7 +20,9 @@ const Footer = () => {
                         </a>
                         <div className="footer__column__description">
                             <div>Par téléphone</div>
-                            <a href="tel:0661619998">06 61 61 99 98</a>
+                            <a title="M'appeler" href="tel:0661619998">
+                                06 61 61 99 98
+                            </a>
                         </div>
                     </div>
                     <div className="footer__column">
@@ -30,7 +32,9 @@ const Footer = () => {
                         </a>
                         <div className="footer__column__description">
                             <div>Par mail</div>
-                            <a href="mailto:contact@graphandco.com">contact@graphandco.com</a>
+                            <a title="M'envoyer un email'" href="mailto:contact@graphandco.com">
+                                contact@graphandco.com
+                            </a>
                         </div>
                     </div>
                     <div className="footer__column">

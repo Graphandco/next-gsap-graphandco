@@ -2,10 +2,12 @@
 @font-face {
     font-family: 'MostraNuova';
     src: url('./fonts/mostranuova5.woff2') format('woff2'), url('./fonts/mostranuova5.woff') format('woff');
+    font-display: swap;
 }
 @font-face {
     font-family: 'MostraNuova2';
     src: url('./fonts/mostranuova2.woff2') format('woff2'), url('./fonts/mostranuova2.woff') format('woff');
+    font-display: swap;
 }
 
 $breakpoints: (
