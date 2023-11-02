@@ -58,9 +58,9 @@ const Prestations = () => {
                             </h1>
                         </FadeIn> */}
                 <div className="prestations__lead container">
-                    <FadeInOut y={-20} delay={1.8} className="prestations__lead__image">
+                    <di className="prestations__lead__image">
                         <Image width={300} height={190} src="/img/prestations-lead.svg" />
-                    </FadeInOut>
+                    </di>
                     <FadeInOut y={-20} delay={1.8} className="prestations__lead__content">
                         Selon votre profil et votre budget, plusieurs options s’offrent à vous. Quel que soit le pack choisi,{' '}
                         <strong>votre site sera personnalisé</strong> pour épouser vos besoins et ceux de vos clients. Qu'il s'agisse d'un site vitrine ou d'un

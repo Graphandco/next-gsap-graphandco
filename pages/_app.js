@@ -7,7 +7,6 @@ import '../src/styles/style.scss';
 import { useEffect, useState } from 'react';
 
 import { AnimatePresence } from 'framer-motion';
-
 import Preloader from '../src/components/Preloader';
 
 export default function MyApp({ Component, pageProps }) {
