@@ -5,7 +5,6 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "postbuild": "next-sitemap",
     "start": "next start",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "format-watch": "npm run format && onchange \"**/*.{js,jsx,json,md}\" -- prettier --write {{changed}}",
@@ -28,7 +27,6 @@
     "lottie-react": "^2.2.1",
     "next": "^12.0.8",
     "next-pwa": "^5.4.0",
-    "next-sitemap": "^4.2.3",
     "prism-react-renderer": "^1.2.1",
     "prismjs": "^1.27.0",
     "prop-types": "^15.8.1",

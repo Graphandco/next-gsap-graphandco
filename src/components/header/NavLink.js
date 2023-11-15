@@ -34,7 +34,7 @@ const CustomLink = styled.span`
     padding: 0 16px;
     /* margin-top: 4px; */
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--text-color);
     transition: 0.3s;
     background: none !important;

@@ -44,6 +44,7 @@ const Title = styled.h1`
     font-size: clamp(38px, 28px + 2vw, 50px);
     color: white;
     font-family: var(--title-font);
+    font-weight: 400;
     @media (max-width: 767px) {
         padding: 25px 2vw;
     }
