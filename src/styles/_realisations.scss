@@ -1,282 +1,291 @@
 .realisations__grid {
-    --color1: hsl(215deg 60% 27%);
-    --color2: hsl(215deg 50% 27%);
-    --color3: hsl(215deg 50% 45%);
-    --color4: hsl(215deg 80% 25%);
+   --color1: hsl(215deg 60% 27%);
+   --color2: hsl(215deg 50% 27%);
+   --color3: hsl(215deg 50% 45%);
+   --color4: hsl(215deg 80% 25%);
 
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 1fr;
-    color: white;
-    width: 100%;
-    @media screen and (max-width: 1650px) {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    @include mq(tablet) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    // @include mq(mobile) {
-    //     grid-template-columns: repeat(1, 1fr);
-    // }
-    @media screen and (max-width: 600px) {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .op5 {
-        opacity: 0.5;
-    }
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-auto-rows: 1fr;
+   color: white;
+   width: 100%;
+   @media screen and (max-width: 1650px) {
+       grid-template-columns: repeat(3, 1fr);
+   }
+   @include mq(tablet) {
+       grid-template-columns: repeat(2, 1fr);
+   }
+   // @include mq(mobile) {
+   //     grid-template-columns: repeat(1, 1fr);
+   // }
+   @media screen and (max-width: 600px) {
+       grid-template-columns: repeat(1, 1fr);
+   }
+   .op5 {
+       opacity: 0.5;
+   }
 
-    &__content {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        padding: 10px 1vw;
-        color: var(--text-color);
-        color: white;
+   &__content {
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       gap: 8px;
+       padding: 10px 1vw;
+       color: var(--text-color);
+       color: white;
 
-        &__title {
-            color: white;
-            text-transform: uppercase;
-            font-family: var(--title-font);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
+       &__title {
+           color: white;
+           text-transform: uppercase;
+           font-family: var(--title-font);
+           font-weight: bold;
+           font-size: 1.2rem;
+       }
 
-        &__description {
-            font-size: 16px;
-            line-height: 1;
-        }
+       &__description {
+           font-size: 16px;
+           line-height: 1;
+       }
 
-        &__link {
-            text-align: right;
-            a {
-                color: whte;
-                font-size: 16px;
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-                transition: 0.3s;
-            }
-        }
-    }
+       &__link {
+           text-align: right;
+           a {
+               color: whte;
+               font-size: 16px;
+               display: inline-flex;
+               align-items: center;
+               gap: 8px;
+               transition: 0.3s;
+           }
+       }
+   }
 }
 
 /*--------------------
-  SINGLE
+ SINGLE
 ----------------------*/
 .realisation {
-    padding-bottom: 30px;
-    &__wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1.3fr;
-        // align-items: center;
-        gap: 5vw;
-        @include mq(mobile) {
-            grid-template-columns: 1fr;
-        }
-    }
-    &__featured {
-        background-image: url(/img/laptop.png);
-        background-size: contain;
-        padding: 5% 11% 13% 11%;
-        background-repeat: no-repeat;
-        img {
-            border-radius: 10px;
-        }
-    }
-    &__description {
-        margin-bottom: 30px;
-    }
-    &__back {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        margin: -10px 0 10px 0;
-        opacity: 0.5;
-    }
-    &__logo {
-        // max-height: 120px;
-        max-width: 125px;
-        position: absolute;
-        top: -10px;
-        left: 20px;
-        background: var(--secondary);
-        padding: 8px;
-        border-radius: 10px;
-        border: 2px solid white;
-    }
+   padding-bottom: 30px;
+   &__wrapper {
+       display: grid;
+       grid-template-columns: 1fr 1.3fr;
+       // align-items: center;
+       gap: 5vw;
+       @include mq(mobile) {
+           grid-template-columns: 1fr;
+       }
+   }
+   &__featured {
+       background-image: url(/img/laptop.png);
+       background-size: contain;
+       padding: 5% 11% 13% 11%;
+       background-repeat: no-repeat;
+       img {
+           border-radius: 10px;
+       }
+   }
+   &__description {
+       margin-bottom: 30px;
+   }
+   &__back {
+       display: flex;
+       align-items: center;
+       gap: 5px;
+       margin: -10px 0 10px 0;
+       opacity: 0.5;
+   }
+   &__logo {
+       // max-height: 120px;
+       max-width: 125px;
+       position: absolute;
+       top: -10px;
+       left: 20px;
+       background: var(--secondary);
+       padding: 8px;
+       border-radius: 10px;
+       border: 2px solid white;
+   }
 }
 /*--------------------
-  GRID
+ GRID
 ----------------------*/
 .realisations-description {
-    padding-bottom: 30px;
-    display: grid;
-    grid-template-columns: 1fr 380px;
-    align-items: center;
-    gap: 50px;
-    position: relative;
+   padding-bottom: 30px;
+   display: grid;
+   grid-template-columns: 1fr 380px;
+   align-items: center;
+   gap: 50px;
+   position: relative;
 
-    @include mq(tablet) {
-        gap: 20px;
-    }
+   @include mq(tablet) {
+       gap: 20px;
+   }
 
-    @include mq(mobile) {
-        grid-template-columns: 1fr;
-    }
+   @include mq(mobile) {
+       grid-template-columns: 1fr;
+   }
 
-    // &:before {
-    //     content: '';
-    //     position: absolute;
-    //     inset: 0;
-    //     background-color: white;
-    //     opacity: 0.05;
-    //     clip-path: polygon(70% 0, 100% 0, 100% 100%, 55% 100%);
-    // }
+   // &:before {
+   //     content: '';
+   //     position: absolute;
+   //     inset: 0;
+   //     background-color: white;
+   //     opacity: 0.05;
+   //     clip-path: polygon(70% 0, 100% 0, 100% 100%, 55% 100%);
+   // }
 
-    .realisations-description-cta {
-        display: grid;
-        place-items: center;
-        gap: 15px;
-        svg {
-            color: white;
-            font-size: 2rem;
-        }
-        & > span {
-            font-family: var(--title-font);
-            text-transform: uppercase;
-            color: white;
-            font-weight: bold;
-        }
-    }
+   .realisations-description-cta {
+       display: grid;
+       place-items: center;
+       gap: 15px;
+       svg {
+           color: white;
+           font-size: 2rem;
+       }
+       & > span {
+           font-family: var(--title-font);
+           text-transform: uppercase;
+           color: white;
+           font-weight: bold;
+       }
+   }
 }
 .realisations-grid {
-    .grid-item {
-        min-height: 200px;
-        a {
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
-            padding: 10px;
-            &:before {
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 100px;
-                bottom: 0;
-                left: 0;
-                background: linear-gradient(transparent, black);
-                opacity: 0.5;
-            }
-            &:after {
-                content: '';
-                position: absolute;
-                inset: 0;
-                background-color: var(--secondary);
-                mix-blend-mode: multiply;
-                mix-blend-mode: hard-light;
-                opacity: 0.9;
-                pointer-events: none;
-                transition: 0.3s;
-            }
-            &:hover:after {
-                opacity: 0.2;
-            }
-        }
-        &-name {
-            position: relative;
-            z-index: 1;
-            font-size: 22px;
-            // font-weight: 600;
-            color: white !important;
-            &:before {
-                content: '';
-                display: inline-block;
-                margin-right: 5px;
-                width: 5px;
-                height: 5px;
-                border-radius: 50%;
-                background-color: var(--primary);
-                z-index: -1;
-            }
-            &:after {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 100%;
-                height: 2px;
-                background-color: var(--primary);
-                z-index: -1;
-            }
-        }
-    }
-    .loide-guitare {
-        grid-area: loide;
-    }
-    .boatman {
-        grid-area: boatman;
-    }
-    .peche-exotique {
-        grid-area: exotique;
-    }
-    .willow-tarot {
-        grid-area: willow;
-    }
-    .hola-mate {
-        grid-area: holamate;
-    }
-    .trois-frontieres-peche {
-        grid-area: troisfp;
-    }
-    .burgerio {
-        grid-area: burgerio;
-    }
-    .fylo {
-        grid-area: fylo;
-    }
-    .barber-shop {
-        grid-area: barber;
-    }
-    .bomot {
-        grid-area: bomot;
-    }
+   .grid-item {
+       min-height: 200px;
+       a {
+           height: 100%;
+           background-size: cover;
+           background-position: center;
+           display: flex;
+           align-items: flex-end;
+           justify-content: flex-end;
+           padding: 10px;
+           &:before {
+               content: '';
+               position: absolute;
+               width: 100%;
+               height: 100px;
+               bottom: 0;
+               left: 0;
+               background: linear-gradient(transparent, black);
+               opacity: 0.5;
+           }
+           &:after {
+               content: '';
+               position: absolute;
+               inset: 0;
+               background-color: var(--secondary);
+               mix-blend-mode: multiply;
+               mix-blend-mode: hard-light;
+               opacity: 0.9;
+               pointer-events: none;
+               transition: 0.3s;
+           }
+           &:hover:after {
+               opacity: 0.2;
+           }
+       }
+       &-name {
+           position: relative;
+           z-index: 1;
+           font-size: 22px;
+           // font-weight: 600;
+           color: white !important;
+           &:before {
+               content: '';
+               display: inline-block;
+               margin-right: 5px;
+               width: 5px;
+               height: 5px;
+               border-radius: 50%;
+               background-color: var(--primary);
+               z-index: -1;
+           }
+           &:after {
+               content: '';
+               position: absolute;
+               left: 0;
+               bottom: 0;
+               width: 100%;
+               height: 2px;
+               background-color: var(--primary);
+               z-index: -1;
+           }
+       }
+   }
+   .loide-guitare {
+       grid-area: loide;
+   }
+   .boatman {
+       grid-area: boatman;
+   }
+   .peche-exotique {
+       grid-area: exotique;
+   }
+   .willow-tarot {
+       grid-area: willow;
+   }
+   .hola-mate {
+       grid-area: holamate;
+   }
+   .trois-frontieres-peche {
+       grid-area: troisfp;
+   }
+   .burgerio {
+       grid-area: burgerio;
+   }
+   .fylo {
+       grid-area: fylo;
+   }
+   .barber-shop {
+       grid-area: barber;
+   }
+   .bomot {
+       grid-area: bomot;
+   }
+   .troisieme-chance {
+       grid-area: troisiemechance;
+   }
+   .alsace-froid-energies {
+       grid-area: alsacefroid;
+   }
 
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas:
-        'loide loide bomot holamate'
-        'loide loide exotique holamate'
-        'burgerio boatman willow willow'
-        'troisfp troisfp fylo barber';
-    gap: 15px;
-    @include mq(tablet) {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        grid-template-areas:
-            'loide loide bomot'
-            'loide loide holamate'
-            'exotique willow willow'
-            'boatman boatman burgerio'
-            'barber fylo troisfp';
-    }
-    @include mq(mobile) {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-        grid-template-areas:
-            'loide bomot'
-            'loide holamate'
-            'exotique holamate'
-            'willow burgerio'
-            'boatman troisfp'
-            'barber troisfp'
-            'fylo fylo';
-    }
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   //  grid-template-rows: repeat(5, 1fr);
+   grid-template-areas:
+       'troisiemechance troisiemechance bomot holamate'
+       'troisiemechance troisiemechance loide holamate'
+       'willow alsacefroid alsacefroid alsacefroid'
+       'willow troisfp fylo barber'
+       'burgerio boatman exotique exotique';
+   gap: 15px;
+   @include mq(tablet) {
+       grid-template-columns: repeat(3, 1fr);
+       //   grid-template-rows: repeat(5, 1fr);
+       grid-template-areas:
+           'troisiemechance troisiemechance bomot'
+           'troisiemechance troisiemechance holamate'
+           'willow alsacefroid alsacefroid'
+           'boatman boatman burgerio'
+           'loide exotique exotique '
+           'barber fylo troisfp';
+   }
+   @include mq(mobile) {
+       grid-template-columns: repeat(2, 1fr);
+       //   grid-template-rows: repeat(6, 1fr);
+       grid-template-areas:
+           'troisiemechance troisiemechance'
+           'alsacefroid bomot'
+           'alsacefroid holamate'
+           'exotique willow'
+           'boatman willow'
+           'barber troisfp'
+           'loide burgerio'
+           'fylo fylo';
+   }
 }
