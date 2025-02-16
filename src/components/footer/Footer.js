@@ -63,7 +63,7 @@ const Footer = () => {
                     </ul>
                     <div className="footer__column__links__description">
                         <Image src="/img/logo.svg" alt="Site Logo" width={25} height={25} />
-                        Graph and Co 2023
+                        Graph and Co {new Date().getFullYear()}
                     </div>
                 </div>
             </div>
