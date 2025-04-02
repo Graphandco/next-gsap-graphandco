@@ -1,5 +1,5 @@
 // import { useContext } from 'react';
-import { FaMobileAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaMobileAlt, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaLinkedin } from 'react-icons/fa';
 // import { TransitionContext } from '../context/TransitionContext';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -55,9 +55,20 @@ const Footer = () => {
                             </Link>
                         </li>
                         <li>
-                            {' '}
                             <Link href="/politique-de-confidentialite">
                                 <a>Politique de confidentialité</a>
+                            </Link>
+                        </li>
+                        <li className="footer__socials">
+                            <Link href="https://www.facebook.com/graphandcoagency/">
+                                <a target="blank" title="Nous suivre sur Facebook">
+                                    <FaFacebook />
+                                </a>
+                            </Link>
+                            <Link href="https://www.linkedin.com/company/graphandco/">
+                                <a target="blank" title="Nous suivre sur Linkedin">
+                                    <FaLinkedin />
+                                </a>
                             </Link>
                         </li>
                     </ul>
