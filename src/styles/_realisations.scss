@@ -273,7 +273,7 @@
         grid-template-areas:
             'troisiemechance troisiemechance bomot'
             'troisiemechance troisiemechance holamate'
-            'willow alsacefroid alsacefroid'
+            'willow alsacefroid rdv'
             'boatman boatman burgerio'
             'loide exotique exotique '
             'barber fylo troisfp';
@@ -283,9 +283,9 @@
         //   grid-template-rows: repeat(6, 1fr);
         grid-template-areas:
             'troisiemechance troisiemechance'
-            'alsacefroid bomot'
-            'alsacefroid holamate'
-            'exotique willow'
+            'bomot alsacefroid'
+            'bomot holamate'
+            'exotique rdv'
             'boatman willow'
             'barber troisfp'
             'loide burgerio'
